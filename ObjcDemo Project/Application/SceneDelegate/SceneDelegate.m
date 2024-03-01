@@ -24,7 +24,7 @@
         UIWindow *window = [[UIWindow alloc] initWithWindowScene:windowScene];
         LoginVC *viewController = [[LoginVC alloc] init];
         UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-        window.rootViewController = navigationController; // or viewController if not using navigation controller
+        window.rootViewController = navigationController;
         self.window = window;
         [window makeKeyAndVisible];
     }
