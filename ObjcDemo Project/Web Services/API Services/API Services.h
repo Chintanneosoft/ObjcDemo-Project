@@ -38,8 +38,6 @@ typedef NS_ENUM(NSInteger, APIService) {
 - (NSString *)httpMethod;
 - (NSDictionary *)header;
 
-//- (NSString *)contentValue;
-//- (NSString *)contentKey;
 
 @end
 

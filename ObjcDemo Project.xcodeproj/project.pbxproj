@@ -10,6 +10,8 @@
 		18A01C792B9599470033EF21 /* API Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A01C782B9599470033EF21 /* API Manager.m */; };
 		18A01C7F2B959EF30033EF21 /* API Services.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A01C7E2B959EF30033EF21 /* API Services.m */; };
 		18A01C862B95A7FE0033EF21 /* NetworkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A01C852B95A7FE0033EF21 /* NetworkConfiguration.m */; };
+		18A01C8A2B95CB580033EF21 /* LoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A01C892B95CB580033EF21 /* LoginService.m */; };
+		18A01C912B95EBBD0033EF21 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A01C902B95EBBD0033EF21 /* User.m */; };
 		18A6B2A72B91DC9F000E3209 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A6B2A52B91DC9F000E3209 /* RegisterVC.m */; };
 		18A6B2A82B91DC9F000E3209 /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A6B2A62B91DC9F000E3209 /* RegisterVC.xib */; };
 		18A6B2AE2B91DE41000E3209 /* TextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A6B2AC2B91DE41000E3209 /* TextFieldTableViewCell.m */; };
@@ -53,6 +55,11 @@
 		18A01C822B95A7890033EF21 /* API Services.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "API Services.h"; sourceTree = "<group>"; };
 		18A01C842B95A7FE0033EF21 /* NetworkConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkConfiguration.h; sourceTree = "<group>"; };
 		18A01C852B95A7FE0033EF21 /* NetworkConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkConfiguration.m; sourceTree = "<group>"; };
+		18A01C882B95CB580033EF21 /* LoginService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginService.h; sourceTree = "<group>"; };
+		18A01C892B95CB580033EF21 /* LoginService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginService.m; sourceTree = "<group>"; };
+		18A01C8F2B95CFE80033EF21 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		18A01C902B95EBBD0033EF21 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		18A01C922B95EE250033EF21 /* Validation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Validation.h; sourceTree = "<group>"; };
 		18A6B2A42B91DC9F000E3209 /* RegisterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
 		18A6B2A52B91DC9F000E3209 /* RegisterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
 		18A6B2A62B91DC9F000E3209 /* RegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
@@ -142,6 +149,24 @@
 				18A01C852B95A7FE0033EF21 /* NetworkConfiguration.m */,
 			);
 			path = NetworkConfiguration;
+			sourceTree = "<group>";
+		};
+		18A01C872B95CB310033EF21 /* Web Service */ = {
+			isa = PBXGroup;
+			children = (
+				18A01C882B95CB580033EF21 /* LoginService.h */,
+				18A01C892B95CB580033EF21 /* LoginService.m */,
+			);
+			path = "Web Service";
+			sourceTree = "<group>";
+		};
+		18A01C8B2B95CC380033EF21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18A01C8F2B95CFE80033EF21 /* User.h */,
+				18A01C902B95EBBD0033EF21 /* User.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		18A6B2A12B91DC69000E3209 /* View */ = {
@@ -266,6 +291,8 @@
 		18B76CDB2B91B0D600F6A373 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				18A01C8B2B95CC380033EF21 /* Model */,
+				18A01C872B95CB310033EF21 /* Web Service */,
 				18B76CE62B91B69F00F6A373 /* ViewModel */,
 				18B76CE52B91B69A00F6A373 /* View */,
 			);
@@ -326,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				18A6B2B02B91EC50000E3209 /* Validation.m */,
+				18A01C922B95EE250033EF21 /* Validation.h */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -463,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A01C912B95EBBD0033EF21 /* User.m in Sources */,
 				18A6B2AE2B91DE41000E3209 /* TextFieldTableViewCell.m in Sources */,
 				18A01C7F2B959EF30033EF21 /* API Services.m in Sources */,
 				18B76CA32B91B05C00F6A373 /* AppDelegate.m in Sources */,
@@ -470,6 +499,7 @@
 				18B76CB42B91B05D00F6A373 /* main.m in Sources */,
 				18A01C792B9599470033EF21 /* API Manager.m in Sources */,
 				18B76CE32B91B69500F6A373 /* LoginVC.m in Sources */,
+				18A01C8A2B95CB580033EF21 /* LoginService.m in Sources */,
 				18A6B2A72B91DC9F000E3209 /* RegisterVC.m in Sources */,
 				18B76CE92B91B6C100F6A373 /* LoginViewModel.m in Sources */,
 				18B76CA62B91B05C00F6A373 /* SceneDelegate.m in Sources */,

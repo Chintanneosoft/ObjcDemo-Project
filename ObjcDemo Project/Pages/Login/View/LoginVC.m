@@ -6,6 +6,7 @@
 //
 
 #import "LoginVC.h"
+#import "LoginViewModel.h"
 
 @interface LoginVC ()
 
@@ -13,10 +14,12 @@
 
 @implementation LoginVC
 
+LoginViewModel *VM;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+    VM = [[LoginViewModel alloc] init];
     [self setUpUI];
 }
 
@@ -33,11 +36,17 @@
     self.btnSignUp.layer.cornerRadius = 40;
 }
 
+- (void) validateUser{
+    [VM validateLoginCredentailsWithEmail: self.txtUserName.text password:self.txtPassword.text];
+}
+
+
 - (IBAction)btnSignUpTapped:(id)sender {
     
 }
 
 - (IBAction)btnSubmitTapped:(id)sender {
+    [self validateUser];
 }
 
 /*

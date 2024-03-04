@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LoginViewModel : NSObject
 
+- (void)validateLoginCredentailsWithEmail: (NSString *)email password:(NSString *)password;
+
 @end
 
 NS_ASSUME_NONNULL_END
