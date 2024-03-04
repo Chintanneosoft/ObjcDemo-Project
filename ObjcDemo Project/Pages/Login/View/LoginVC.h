@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *btnSignUp;
 @property (weak, nonatomic) IBOutlet UIButton *btnSubmit;
 
+- (IBAction)btnSignUpTapped:(id)sender;
+- (IBAction)btnSubmitTapped:(id)sender;
 
 @end
 

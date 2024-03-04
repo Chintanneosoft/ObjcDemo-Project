@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18A01C792B9599470033EF21 /* API Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A01C782B9599470033EF21 /* API Manager.m */; };
+		18A01C7F2B959EF30033EF21 /* API Services.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A01C7E2B959EF30033EF21 /* API Services.m */; };
+		18A01C862B95A7FE0033EF21 /* NetworkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A01C852B95A7FE0033EF21 /* NetworkConfiguration.m */; };
 		18A6B2A72B91DC9F000E3209 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A6B2A52B91DC9F000E3209 /* RegisterVC.m */; };
 		18A6B2A82B91DC9F000E3209 /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A6B2A62B91DC9F000E3209 /* RegisterVC.xib */; };
 		18A6B2AE2B91DE41000E3209 /* TextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A6B2AC2B91DE41000E3209 /* TextFieldTableViewCell.m */; };
@@ -44,6 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18A01C782B9599470033EF21 /* API Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "API Manager.m"; sourceTree = "<group>"; };
+		18A01C7A2B959E370033EF21 /* API Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "API Manager.h"; sourceTree = "<group>"; };
+		18A01C7E2B959EF30033EF21 /* API Services.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "API Services.m"; sourceTree = "<group>"; };
+		18A01C822B95A7890033EF21 /* API Services.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "API Services.h"; sourceTree = "<group>"; };
+		18A01C842B95A7FE0033EF21 /* NetworkConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkConfiguration.h; sourceTree = "<group>"; };
+		18A01C852B95A7FE0033EF21 /* NetworkConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkConfiguration.m; sourceTree = "<group>"; };
 		18A6B2A42B91DC9F000E3209 /* RegisterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
 		18A6B2A52B91DC9F000E3209 /* RegisterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
 		18A6B2A62B91DC9F000E3209 /* RegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
@@ -98,6 +107,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18A01C762B9599140033EF21 /* Web Services */ = {
+			isa = PBXGroup;
+			children = (
+				18A01C832B95A7CD0033EF21 /* NetworkConfiguration */,
+				18A01C7B2B959EB30033EF21 /* API Services */,
+				18A01C772B9599240033EF21 /* API Manager */,
+			);
+			path = "Web Services";
+			sourceTree = "<group>";
+		};
+		18A01C772B9599240033EF21 /* API Manager */ = {
+			isa = PBXGroup;
+			children = (
+				18A01C782B9599470033EF21 /* API Manager.m */,
+				18A01C7A2B959E370033EF21 /* API Manager.h */,
+			);
+			path = "API Manager";
+			sourceTree = "<group>";
+		};
+		18A01C7B2B959EB30033EF21 /* API Services */ = {
+			isa = PBXGroup;
+			children = (
+				18A01C7E2B959EF30033EF21 /* API Services.m */,
+				18A01C822B95A7890033EF21 /* API Services.h */,
+			);
+			path = "API Services";
+			sourceTree = "<group>";
+		};
+		18A01C832B95A7CD0033EF21 /* NetworkConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				18A01C842B95A7FE0033EF21 /* NetworkConfiguration.h */,
+				18A01C852B95A7FE0033EF21 /* NetworkConfiguration.m */,
+			);
+			path = NetworkConfiguration;
+			sourceTree = "<group>";
+		};
 		18A6B2A12B91DC69000E3209 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,10 +195,11 @@
 		18B76CA02B91B05C00F6A373 /* ObjcDemo Project */ = {
 			isa = PBXGroup;
 			children = (
+				18A01C762B9599140033EF21 /* Web Services */,
+				18B76CDA2B91B0CD00F6A373 /* Pages */,
 				18B76CEA2B91B80A00F6A373 /* Utilities */,
 				18B76CD72B91B06F00F6A373 /* Application */,
 				18B76CDF2B91B15E00F6A373 /* Resources */,
-				18B76CDA2B91B0CD00F6A373 /* Pages */,
 				18B76CAA2B91B05C00F6A373 /* Main.storyboard */,
 				18B76CAF2B91B05D00F6A373 /* LaunchScreen.storyboard */,
 				18B76CB22B91B05D00F6A373 /* Info.plist */,
@@ -417,13 +464,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A6B2AE2B91DE41000E3209 /* TextFieldTableViewCell.m in Sources */,
+				18A01C7F2B959EF30033EF21 /* API Services.m in Sources */,
 				18B76CA32B91B05C00F6A373 /* AppDelegate.m in Sources */,
 				18A6B2B12B91EC50000E3209 /* Validation.m in Sources */,
 				18B76CB42B91B05D00F6A373 /* main.m in Sources */,
+				18A01C792B9599470033EF21 /* API Manager.m in Sources */,
 				18B76CE32B91B69500F6A373 /* LoginVC.m in Sources */,
 				18A6B2A72B91DC9F000E3209 /* RegisterVC.m in Sources */,
 				18B76CE92B91B6C100F6A373 /* LoginViewModel.m in Sources */,
 				18B76CA62B91B05C00F6A373 /* SceneDelegate.m in Sources */,
+				18A01C862B95A7FE0033EF21 /* NetworkConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
