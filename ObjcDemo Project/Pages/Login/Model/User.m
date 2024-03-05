@@ -69,19 +69,23 @@
 - (instancetype)initWithData:(NSData *)data error:(NSError **)error {
     self = [super init];
     if (self) {
-        NSError *jsonError;
-        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-        if (jsonError) {
-            *error = jsonError;
-            return nil;
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:error];
+        if (json && *error == nil) {
+            _status = json[@"status"];
+            _message = json[@"message"];
+            _user_msg = json[@"user_msg"];
+            
+            id dataObject = json[@"data"];
+            if ([dataObject isKindOfClass:[NSNumber class]]) {
+                _data = [dataObject boolValue];
+            } else {
+                // Handle the case where dataObject is not a number
+                // You might want to set _data to NO, or set an error
+            }
         }
-
-        // Initialize the User object with values from the JSON object.
-        _status = json[@"status"];
-        _message = json[@"message"];
-        _user_msg = json[@"user_msg"];
     }
     return self;
 }
+
 
 @end

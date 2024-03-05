@@ -21,16 +21,16 @@
                     completion(nil, nil, error);
                 } else {
                     NSError *jsonError;
-                    User *user = [[User alloc] initWithData:data error:&jsonError];
-                    if (jsonError) {
-                        UserFailure *userFailure = [[UserFailure alloc] initWithData:data error:&jsonError];
+                    @try {
+                        User *user = [[User alloc] initWithData:data error:&jsonError];
+                        completion(user, nil, nil);
+                    } @catch (NSException *exception) {
                         if (jsonError) {
                             completion(nil, nil, jsonError);
                         } else {
+                            UserFailure *userFailure = [[UserFailure alloc] initWithData:data error:&jsonError];
                             completion(nil, userFailure, nil);
                         }
-                    } else {
-                        completion(user, nil, nil);
                     }
                 }
             }];

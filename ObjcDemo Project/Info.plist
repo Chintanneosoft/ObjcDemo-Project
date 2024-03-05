@@ -4,19 +4,6 @@
 <dict>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
-        <key>NSAppTransportSecurity</key>
-        <dict>
-            <key>NSAllowsArbitraryLoads</key>
-            <true/>
-            <key>NSExceptionDomains</key>
-            <dict>
-                <key>example.com</key>
-                <dict>
-                    <key>NSExceptionAllowsInsecureHTTPLoads</key>
-                    <true/>
-                </dict>
-            </dict>
-        </dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
 		<key>UISceneConfigurations</key>
@@ -32,5 +19,18 @@
 			</array>
 		</dict>
 	</dict>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>example.com</key>
+            <dict>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+            </dict>
+        </dict>
+    </dict>
 </dict>
 </plist>
