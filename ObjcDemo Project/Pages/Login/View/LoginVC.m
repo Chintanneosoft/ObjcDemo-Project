@@ -7,6 +7,7 @@
 
 #import "LoginVC.h"
 #import "LoginViewModel.h"
+#import "RegisterVC.h"
 
 @interface LoginVC ()
 
@@ -42,7 +43,8 @@ LoginViewModel *VM;
 
 
 - (IBAction)btnSignUpTapped:(id)sender {
-    
+    RegisterVC *nextVC = [[RegisterVC alloc] init];
+    [self.navigationController pushViewController:nextVC animated:YES];
 }
 
 - (IBAction)btnSubmitTapped:(id)sender {

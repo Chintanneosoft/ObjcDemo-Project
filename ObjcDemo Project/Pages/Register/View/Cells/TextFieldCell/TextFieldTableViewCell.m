@@ -11,13 +11,16 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    [self.imgTextfieldCell setTintColor:[UIColor whiteColor]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+}
 
-    // Configure the view for the selected state
+- (void) configureCellwithPlaceholder: (NSString *)placeHolder image: (UIImage *)image{
+    self.txtTextFieldCell.placeholder = placeHolder;
+    self.imgTextfieldCell.image = image;
 }
 
 @end

@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITextField *txtTextFieldCell;
 @property (weak, nonatomic) IBOutlet UIImageView *imgTextfieldCell;
 
+- (void) configureCellwithPlaceholder: (NSString *)placeHolder image: (UIImage *)image;
 @end
 
 NS_ASSUME_NONNULL_END
