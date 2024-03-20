@@ -3,4 +3,54 @@
    uuid = "3B38A512-4380-4D8E-816E-C38D5F794524"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "88932A93-9AAD-4BEE-A431-6D1B2D9B4655"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjcDemo Project/Pages/Register/View/Cells/TextFieldCell/TextFieldTableViewCell.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "-textFieldShouldReturn:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "88932A93-9AAD-4BEE-A431-6D1B2D9B4655 - c7abeb238de611ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[TextFieldTableViewCell textFieldShouldReturn:]"
+                  moduleName = "ObjcDemo Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/Chintan/ObjcDemo%20Project/ObjcDemo%20Project/Pages/Register/View/Cells/TextFieldCell/TextFieldTableViewCell.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "88932A93-9AAD-4BEE-A431-6D1B2D9B4655 - c7abeb238de611cb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[TextFieldTableViewCell textFieldShouldReturn:]"
+                  moduleName = "ObjcDemo Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/Chintan/ObjcDemo%20Project/ObjcDemo%20Project/Pages/Register/View/Cells/TextFieldCell/TextFieldTableViewCell.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "62">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

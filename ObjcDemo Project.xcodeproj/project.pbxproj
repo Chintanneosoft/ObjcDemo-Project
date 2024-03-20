@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1878F8022BAADAE9007FA01E /* SubmitButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1878F8002BAADAE9007FA01E /* SubmitButtonTableViewCell.m */; };
+		1878F8032BAADAE9007FA01E /* SubmitButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1878F8012BAADAE9007FA01E /* SubmitButtonTableViewCell.xib */; };
 		18A01C792B9599470033EF21 /* API Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A01C782B9599470033EF21 /* API Manager.m */; };
 		18A01C7F2B959EF30033EF21 /* API Services.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A01C7E2B959EF30033EF21 /* API Services.m */; };
 		18A01C862B95A7FE0033EF21 /* NetworkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A01C852B95A7FE0033EF21 /* NetworkConfiguration.m */; };
@@ -51,6 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1878F7FF2BAADAE9007FA01E /* SubmitButtonTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubmitButtonTableViewCell.h; sourceTree = "<group>"; };
+		1878F8002BAADAE9007FA01E /* SubmitButtonTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubmitButtonTableViewCell.m; sourceTree = "<group>"; };
+		1878F8012BAADAE9007FA01E /* SubmitButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubmitButtonTableViewCell.xib; sourceTree = "<group>"; };
+		1878F8052BAB1A19007FA01E /* TextFieldTableViewCellDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFieldTableViewCellDelegate.h; sourceTree = "<group>"; };
 		18A01C782B9599470033EF21 /* API Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "API Manager.m"; sourceTree = "<group>"; };
 		18A01C7A2B959E370033EF21 /* API Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "API Manager.h"; sourceTree = "<group>"; };
 		18A01C7E2B959EF30033EF21 /* API Services.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "API Services.m"; sourceTree = "<group>"; };
@@ -119,6 +125,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1878F7FE2BAADA8C007FA01E /* SubmitButtonCell */ = {
+			isa = PBXGroup;
+			children = (
+				1878F7FF2BAADAE9007FA01E /* SubmitButtonTableViewCell.h */,
+				1878F8002BAADAE9007FA01E /* SubmitButtonTableViewCell.m */,
+				1878F8012BAADAE9007FA01E /* SubmitButtonTableViewCell.xib */,
+			);
+			path = SubmitButtonCell;
+			sourceTree = "<group>";
+		};
 		18A01C762B9599140033EF21 /* Web Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +211,7 @@
 		18A6B2AA2B91DE04000E3209 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1878F7FE2BAADA8C007FA01E /* SubmitButtonCell */,
 				18AB90E32B98846000F174E3 /* RegisterHeaderView */,
 				18AB90E22B98844300F174E3 /* TextFieldCell */,
 			);
@@ -214,6 +231,7 @@
 				18A6B2AB2B91DE41000E3209 /* TextFieldTableViewCell.h */,
 				18A6B2AC2B91DE41000E3209 /* TextFieldTableViewCell.m */,
 				18A6B2AD2B91DE41000E3209 /* TextFieldTableViewCell.xib */,
+				1878F8052BAB1A19007FA01E /* TextFieldTableViewCellDelegate.h */,
 			);
 			path = TextFieldCell;
 			sourceTree = "<group>";
@@ -494,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18AB90E62B9884AC00F174E3 /* RegisterHeaderView.xib in Resources */,
+				1878F8032BAADAE9007FA01E /* SubmitButtonTableViewCell.xib in Resources */,
 				18B76CB12B91B05D00F6A373 /* LaunchScreen.storyboard in Resources */,
 				18A6B2AF2B91DE41000E3209 /* TextFieldTableViewCell.xib in Resources */,
 				18B76CAE2B91B05D00F6A373 /* Assets.xcassets in Resources */,
@@ -525,6 +544,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A01C912B95EBBD0033EF21 /* User.m in Sources */,
+				1878F8022BAADAE9007FA01E /* SubmitButtonTableViewCell.m in Sources */,
 				18A6B2AE2B91DE41000E3209 /* TextFieldTableViewCell.m in Sources */,
 				18AB90E92B98853A00F174E3 /* RegisterHeaderView.m in Sources */,
 				18A01C7F2B959EF30033EF21 /* API Services.m in Sources */,

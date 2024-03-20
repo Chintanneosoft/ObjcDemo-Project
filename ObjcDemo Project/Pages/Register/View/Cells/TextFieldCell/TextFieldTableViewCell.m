@@ -12,6 +12,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self.imgTextfieldCell setTintColor:[UIColor whiteColor]];
+    self.txtTextFieldCell.delegate = self;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -21,6 +22,12 @@
 - (void) configureCellwithPlaceholder: (NSString *)placeHolder image: (UIImage *)image{
     self.txtTextFieldCell.placeholder = placeHolder;
     self.imgTextfieldCell.image = image;
+}
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.delegate tableViewCellDidSubmitTextFieldValues:textField.text];
+    return false;
 }
 
 @end
