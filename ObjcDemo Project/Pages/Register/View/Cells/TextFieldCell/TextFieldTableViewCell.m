@@ -13,6 +13,7 @@
     [super awakeFromNib];
     [self.imgTextfieldCell setTintColor:[UIColor whiteColor]];
     self.txtTextFieldCell.delegate = self;
+    self.imgTextfieldCell.layer.cornerRadius = self.imgTextfieldCell.frame.size.width/2;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -26,7 +27,7 @@
 
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [self.delegate tableViewCellDidSubmitTextFieldValues:textField.text];
+    [self.delegate tableViewCellDidSubmitTextFieldValues:textField.text textFieldtag:textField.tag];
     return false;
 }
 

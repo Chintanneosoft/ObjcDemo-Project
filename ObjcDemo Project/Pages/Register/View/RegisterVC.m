@@ -10,9 +10,6 @@
 #import "SubmitButtonTableViewCell.h"
 #import "RegisterHeaderView.h"
 
-@interface RegisterVC ()
-
-@end
 
 @implementation RegisterVC
 
@@ -21,6 +18,7 @@
     // Do any additional setup after loading the view from its nib.
     [self setTableView];
     [self setUpUI];
+    _VM = [[RegisterViewModel alloc] init];
 }
 
 - (void) setUpUI{
@@ -29,7 +27,7 @@
 }
 
 - (void) sendForValidation{
-    NSLog(@"Fields");
+    [_VM callValidations];
 }
 
 - (void)setTableView {
@@ -45,7 +43,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 0){
-        return 5;
+        return 7;
     }
     return 1;
 }
@@ -57,6 +55,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         TextFieldTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TextFieldTableViewCell" forIndexPath:indexPath];
+        cell.txtTextFieldCell.tag = indexPath.row + 1;
         cell.delegate = self;
         switch (indexPath.row) {
             case 0:
@@ -69,12 +68,15 @@
                 [cell configureCellwithPlaceholder:@"Email" image:[UIImage systemImageNamed:@"envelope.circle.fill"]];
                 break;
             case 3:
-                [cell configureCellwithPlaceholder:@"Phone Number" image:[UIImage systemImageNamed:@"phone.bubble.fill"]];
+                [cell configureCellwithPlaceholder:@"Phone Number" image:[UIImage systemImageNamed:@"phone.circle.fill"]];
                 break;
             case 4:
-                [cell configureCellwithPlaceholder:@"Password" image:[UIImage systemImageNamed:@"lock.circle.fill"]];
+                [cell configureCellwithPlaceholder:@"Gender" image:[UIImage imageNamed:@"gender"]];
                 break;
             case 5:
+                [cell configureCellwithPlaceholder:@"Password" image:[UIImage systemImageNamed:@"lock.circle.fill"]];
+                break;
+            case 6:
                 [cell configureCellwithPlaceholder:@"Confirm Password" image:[UIImage systemImageNamed:@"lock.circle.fill"]];
                 break;
             default:
@@ -140,8 +142,33 @@
 }
 */
 
-- (void)tableViewCellDidSubmitTextFieldValues:(NSString *)textFieldValue { 
-    NSLog(@"%@", textFieldValue);
+- (void)tableViewCellDidSubmitTextFieldValues:(NSString *)textFieldValue textFieldtag:(NSInteger)tag { 
+    switch (tag) {
+        case 1:
+            _VM.registerInputData[@"firstName"] = textFieldValue;
+            break;
+        case 2:
+            _VM.registerInputData[@"lastName"] = textFieldValue;
+            break;
+        case 3:
+            _VM.registerInputData[@"email"] = textFieldValue;
+            break;
+        case 4:
+            _VM.registerInputData[@"phone"] = textFieldValue;
+            break;
+        case 5:
+            _VM.registerInputData[@"gender"] = textFieldValue;
+            break;
+        case 6:
+            _VM.registerInputData[@"password"] = textFieldValue;
+            break;
+        case 7:
+            _VM.registerInputData[@"confirmPassword"] = textFieldValue;
+            break;
+        
+        default:
+            break;
+    }
 }
 
 @end

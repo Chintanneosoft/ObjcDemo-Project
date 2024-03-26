@@ -9,18 +9,12 @@
 #import "LoginViewModel.h"
 #import "RegisterVC.h"
 
-@interface LoginVC ()
-
-@end
-
 @implementation LoginVC
-
-LoginViewModel *VM;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    VM = [[LoginViewModel alloc] init];
+    self.VM = [[LoginViewModel alloc] init];
     [self setUpUI];
 }
 
@@ -38,7 +32,7 @@ LoginViewModel *VM;
 }
 
 - (void) validateUser{
-    [VM validateLoginCredentailsWithEmail: self.txtUserName.text password:self.txtPassword.text];
+    [self.VM validateLoginCredentailsWithEmail: self.txtUserName.text password:self.txtPassword.text];
 }
 
 

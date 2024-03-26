@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *imgPassword;
 @property (weak, nonatomic) IBOutlet UIButton *btnSignUp;
 @property (weak, nonatomic) IBOutlet UIButton *btnSubmit;
+
+@property (strong, nonatomic) LoginViewModel *VM;
 
 - (IBAction)btnSignUpTapped:(id)sender;
 - (IBAction)btnSubmitTapped:(id)sender;

@@ -9,7 +9,7 @@
 #define TextFieldTableViewCellDelegate_h
 
 @protocol TextFieldTableViewCellDelegate <NSObject>
-- (void)tableViewCellDidSubmitTextFieldValues:(NSString *)textFieldValue;
+- (void)tableViewCellDidSubmitTextFieldValues:(NSString *)textFieldValue textFieldtag:(NSInteger)tag;
 @end
 
 #endif /* TextFieldTableViewCellDelegate_h */
