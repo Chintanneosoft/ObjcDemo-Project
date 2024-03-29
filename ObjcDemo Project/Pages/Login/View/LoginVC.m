@@ -8,6 +8,7 @@
 #import "LoginVC.h"
 #import "LoginViewModel.h"
 #import "RegisterVC.h"
+#import "OTPVerificationVC.h"
 
 @implementation LoginVC
 
@@ -42,17 +43,10 @@
 }
 
 - (IBAction)btnSubmitTapped:(id)sender {
-    [self validateUser];
+//    [self validateUser];
+    OTPVerificationVC *nextVC = [[OTPVerificationVC alloc] init];
+    [self.navigationController pushViewController:nextVC animated:YES];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

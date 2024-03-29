@@ -171,6 +171,27 @@
 			path = SubmitButtonCell;
 			sourceTree = "<group>";
 		};
+		187BFC462BB6E4EF00F7500A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		187BFC472BB6E4F300F7500A /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		187BFC482BB6E50400F7500A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		18A01C762B9599140033EF21 /* Web Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +443,9 @@
 		18B76CDE2B91B0EE00F6A373 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				187BFC482BB6E50400F7500A /* View */,
+				187BFC472BB6E4F300F7500A /* View Model */,
+				187BFC462BB6E4EF00F7500A /* Model */,
 			);
 			path = Home;
 			sourceTree = "<group>";

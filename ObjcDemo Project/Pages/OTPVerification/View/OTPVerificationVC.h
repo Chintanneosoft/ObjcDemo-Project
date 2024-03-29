@@ -9,7 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OTPVerificationVC : UIViewController
+@interface OTPVerificationVC : UIViewController<UITextFieldDelegate>
+@property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *txtOTPCollection;
 
 @end
 
