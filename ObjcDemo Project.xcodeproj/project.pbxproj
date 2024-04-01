@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1878F8022BAADAE9007FA01E /* SubmitButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1878F8002BAADAE9007FA01E /* SubmitButtonTableViewCell.m */; };
+		1878F8032BAADAE9007FA01E /* SubmitButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1878F8012BAADAE9007FA01E /* SubmitButtonTableViewCell.xib */; };
+		189D5E732BABFDE3009FF741 /* RegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 189D5E722BABFDE3009FF741 /* RegisterViewModel.m */; };
+		189D5E762BAC0050009FF741 /* RegisterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 189D5E752BAC0050009FF741 /* RegisterModel.m */; };
 		18A01C792B9599470033EF21 /* API Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A01C782B9599470033EF21 /* API Manager.m */; };
 		18A01C7F2B959EF30033EF21 /* API Services.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A01C7E2B959EF30033EF21 /* API Services.m */; };
 		18A01C862B95A7FE0033EF21 /* NetworkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A01C852B95A7FE0033EF21 /* NetworkConfiguration.m */; };
+		18A01C8A2B95CB580033EF21 /* LoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A01C892B95CB580033EF21 /* LoginService.m */; };
+		18A01C912B95EBBD0033EF21 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A01C902B95EBBD0033EF21 /* User.m */; };
+		18A0519B2BAD60C5004A02D7 /* RegisterService.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0519A2BAD60C5004A02D7 /* RegisterService.m */; };
 		18A6B2A72B91DC9F000E3209 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A6B2A52B91DC9F000E3209 /* RegisterVC.m */; };
 		18A6B2A82B91DC9F000E3209 /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A6B2A62B91DC9F000E3209 /* RegisterVC.xib */; };
 		18A6B2AE2B91DE41000E3209 /* TextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A6B2AC2B91DE41000E3209 /* TextFieldTableViewCell.m */; };
 		18A6B2AF2B91DE41000E3209 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A6B2AD2B91DE41000E3209 /* TextFieldTableViewCell.xib */; };
 		18A6B2B12B91EC50000E3209 /* Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A6B2B02B91EC50000E3209 /* Validation.m */; };
+		18AB90E62B9884AC00F174E3 /* RegisterHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18AB90E52B9884AC00F174E3 /* RegisterHeaderView.xib */; };
+		18AB90E92B98853A00F174E3 /* RegisterHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AB90E82B98853A00F174E3 /* RegisterHeaderView.m */; };
 		18B76CA32B91B05C00F6A373 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B76CA22B91B05C00F6A373 /* AppDelegate.m */; };
 		18B76CA62B91B05C00F6A373 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B76CA52B91B05C00F6A373 /* SceneDelegate.m */; };
 		18B76CAC2B91B05C00F6A373 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B76CAA2B91B05C00F6A373 /* Main.storyboard */; };
@@ -27,6 +36,8 @@
 		18B76CE32B91B69500F6A373 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B76CE12B91B69500F6A373 /* LoginVC.m */; };
 		18B76CE42B91B69500F6A373 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B76CE22B91B69500F6A373 /* LoginVC.xib */; };
 		18B76CE92B91B6C100F6A373 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B76CE82B91B6C100F6A373 /* LoginViewModel.m */; };
+		18BAF3A72BB2CBAC004D181E /* OTPVerificationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BAF3A52BB2CBAC004D181E /* OTPVerificationVC.m */; };
+		18BAF3A82BB2CBAC004D181E /* OTPVerificationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BAF3A62BB2CBAC004D181E /* OTPVerificationVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,13 +57,42 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		189D5EB02BAC37B3009FF741 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		183DE7CF2BAC5E130053C061 /* ParseIntoModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseIntoModel.framework; path = "../../../Library/Developer/Xcode/DerivedData/ParseIntoModel-cjvtbtzywtliiugqppihctrhuzlh/Build/Products/Debug-iphoneos/ParseIntoModel.framework"; sourceTree = "<group>"; };
+		1878F7FF2BAADAE9007FA01E /* SubmitButtonTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubmitButtonTableViewCell.h; sourceTree = "<group>"; };
+		1878F8002BAADAE9007FA01E /* SubmitButtonTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubmitButtonTableViewCell.m; sourceTree = "<group>"; };
+		1878F8012BAADAE9007FA01E /* SubmitButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubmitButtonTableViewCell.xib; sourceTree = "<group>"; };
+		1878F8052BAB1A19007FA01E /* TextFieldTableViewCellDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFieldTableViewCellDelegate.h; sourceTree = "<group>"; };
+		189D5E712BABFDE3009FF741 /* RegisterViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterViewModel.h; sourceTree = "<group>"; };
+		189D5E722BABFDE3009FF741 /* RegisterViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewModel.m; sourceTree = "<group>"; };
+		189D5E742BAC0050009FF741 /* RegisterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterModel.h; sourceTree = "<group>"; };
+		189D5E752BAC0050009FF741 /* RegisterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterModel.m; sourceTree = "<group>"; };
 		18A01C782B9599470033EF21 /* API Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "API Manager.m"; sourceTree = "<group>"; };
 		18A01C7A2B959E370033EF21 /* API Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "API Manager.h"; sourceTree = "<group>"; };
 		18A01C7E2B959EF30033EF21 /* API Services.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "API Services.m"; sourceTree = "<group>"; };
 		18A01C822B95A7890033EF21 /* API Services.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "API Services.h"; sourceTree = "<group>"; };
 		18A01C842B95A7FE0033EF21 /* NetworkConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkConfiguration.h; sourceTree = "<group>"; };
 		18A01C852B95A7FE0033EF21 /* NetworkConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkConfiguration.m; sourceTree = "<group>"; };
+		18A01C882B95CB580033EF21 /* LoginService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginService.h; sourceTree = "<group>"; };
+		18A01C892B95CB580033EF21 /* LoginService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginService.m; sourceTree = "<group>"; };
+		18A01C8F2B95CFE80033EF21 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		18A01C902B95EBBD0033EF21 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		18A01C922B95EE250033EF21 /* Validation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Validation.h; sourceTree = "<group>"; };
+		18A051992BAD60C5004A02D7 /* RegisterService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterService.h; sourceTree = "<group>"; };
+		18A0519A2BAD60C5004A02D7 /* RegisterService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterService.m; sourceTree = "<group>"; };
 		18A6B2A42B91DC9F000E3209 /* RegisterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
 		18A6B2A52B91DC9F000E3209 /* RegisterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
 		18A6B2A62B91DC9F000E3209 /* RegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
@@ -60,6 +100,9 @@
 		18A6B2AC2B91DE41000E3209 /* TextFieldTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFieldTableViewCell.m; sourceTree = "<group>"; };
 		18A6B2AD2B91DE41000E3209 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		18A6B2B02B91EC50000E3209 /* Validation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Validation.m; sourceTree = "<group>"; };
+		18AB90E52B9884AC00F174E3 /* RegisterHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterHeaderView.xib; sourceTree = "<group>"; };
+		18AB90E72B98853A00F174E3 /* RegisterHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterHeaderView.h; sourceTree = "<group>"; };
+		18AB90E82B98853A00F174E3 /* RegisterHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterHeaderView.m; sourceTree = "<group>"; };
 		18B76C9E2B91B05C00F6A373 /* ObjcDemo Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ObjcDemo Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B76CA12B91B05C00F6A373 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18B76CA22B91B05C00F6A373 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -80,6 +123,9 @@
 		18B76CE22B91B69500F6A373 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		18B76CE72B91B6C100F6A373 /* LoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		18B76CE82B91B6C100F6A373 /* LoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		18BAF3A42BB2CBAC004D181E /* OTPVerificationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTPVerificationVC.h; sourceTree = "<group>"; };
+		18BAF3A52BB2CBAC004D181E /* OTPVerificationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTPVerificationVC.m; sourceTree = "<group>"; };
+		18BAF3A62BB2CBAC004D181E /* OTPVerificationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPVerificationVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +153,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		183DE7CE2BAC5E130053C061 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				183DE7CF2BAC5E130053C061 /* ParseIntoModel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1878F7FE2BAADA8C007FA01E /* SubmitButtonCell */ = {
+			isa = PBXGroup;
+			children = (
+				1878F7FF2BAADAE9007FA01E /* SubmitButtonTableViewCell.h */,
+				1878F8002BAADAE9007FA01E /* SubmitButtonTableViewCell.m */,
+				1878F8012BAADAE9007FA01E /* SubmitButtonTableViewCell.xib */,
+			);
+			path = SubmitButtonCell;
+			sourceTree = "<group>";
+		};
+		187BFC462BB6E4EF00F7500A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		187BFC472BB6E4F300F7500A /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		187BFC482BB6E50400F7500A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		18A01C762B9599140033EF21 /* Web Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +229,33 @@
 			path = NetworkConfiguration;
 			sourceTree = "<group>";
 		};
+		18A01C872B95CB310033EF21 /* Web Service */ = {
+			isa = PBXGroup;
+			children = (
+				18A01C882B95CB580033EF21 /* LoginService.h */,
+				18A01C892B95CB580033EF21 /* LoginService.m */,
+			);
+			path = "Web Service";
+			sourceTree = "<group>";
+		};
+		18A01C8B2B95CC380033EF21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18A01C8F2B95CFE80033EF21 /* User.h */,
+				18A01C902B95EBBD0033EF21 /* User.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18A051982BAD609E004A02D7 /* RegisterService */ = {
+			isa = PBXGroup;
+			children = (
+				18A051992BAD60C5004A02D7 /* RegisterService.h */,
+				18A0519A2BAD60C5004A02D7 /* RegisterService.m */,
+			);
+			path = RegisterService;
+			sourceTree = "<group>";
+		};
 		18A6B2A12B91DC69000E3209 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +270,8 @@
 		18A6B2A22B91DC6F000E3209 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				189D5E712BABFDE3009FF741 /* RegisterViewModel.h */,
+				189D5E722BABFDE3009FF741 /* RegisterViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -165,11 +279,41 @@
 		18A6B2AA2B91DE04000E3209 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1878F7FE2BAADA8C007FA01E /* SubmitButtonCell */,
+				18AB90E32B98846000F174E3 /* RegisterHeaderView */,
+				18AB90E22B98844300F174E3 /* TextFieldCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		18AB90E12B9856B200F174E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				189D5E742BAC0050009FF741 /* RegisterModel.h */,
+				189D5E752BAC0050009FF741 /* RegisterModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18AB90E22B98844300F174E3 /* TextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
 				18A6B2AB2B91DE41000E3209 /* TextFieldTableViewCell.h */,
 				18A6B2AC2B91DE41000E3209 /* TextFieldTableViewCell.m */,
 				18A6B2AD2B91DE41000E3209 /* TextFieldTableViewCell.xib */,
+				1878F8052BAB1A19007FA01E /* TextFieldTableViewCellDelegate.h */,
 			);
-			path = Cells;
+			path = TextFieldCell;
+			sourceTree = "<group>";
+		};
+		18AB90E32B98846000F174E3 /* RegisterHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				18AB90E52B9884AC00F174E3 /* RegisterHeaderView.xib */,
+				18AB90E72B98853A00F174E3 /* RegisterHeaderView.h */,
+				18AB90E82B98853A00F174E3 /* RegisterHeaderView.m */,
+			);
+			path = RegisterHeaderView;
 			sourceTree = "<group>";
 		};
 		18B76C952B91B05C00F6A373 = {
@@ -179,6 +323,7 @@
 				18B76CBC2B91B05E00F6A373 /* ObjcDemo ProjectTests */,
 				18B76CC62B91B05E00F6A373 /* ObjcDemo ProjectUITests */,
 				18B76C9F2B91B05C00F6A373 /* Products */,
+				183DE7CE2BAC5E130053C061 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -255,7 +400,7 @@
 		18B76CDA2B91B0CD00F6A373 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				18B76CDE2B91B0EE00F6A373 /* Home */,
+				18B76CDE2B91B0EE00F6A373 /* HomeTabBar */,
 				18B76CDD2B91B0E100F6A373 /* OTPVerification */,
 				18B76CDC2B91B0DB00F6A373 /* Register */,
 				18B76CDB2B91B0D600F6A373 /* Login */,
@@ -266,6 +411,8 @@
 		18B76CDB2B91B0D600F6A373 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				18A01C8B2B95CC380033EF21 /* Model */,
+				18A01C872B95CB310033EF21 /* Web Service */,
 				18B76CE62B91B69F00F6A373 /* ViewModel */,
 				18B76CE52B91B69A00F6A373 /* View */,
 			);
@@ -275,6 +422,8 @@
 		18B76CDC2B91B0DB00F6A373 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				18A051982BAD609E004A02D7 /* RegisterService */,
+				18AB90E12B9856B200F174E3 /* Model */,
 				18A6B2A22B91DC6F000E3209 /* ViewModel */,
 				18A6B2A12B91DC69000E3209 /* View */,
 			);
@@ -284,15 +433,21 @@
 		18B76CDD2B91B0E100F6A373 /* OTPVerification */ = {
 			isa = PBXGroup;
 			children = (
+				18BAF3A32BB2CB8A004D181E /* View */,
+				18BAF3A22BB2CB86004D181E /* Model */,
+				18BAF3A12BB2CB7F004D181E /* ViewModel */,
 			);
 			path = OTPVerification;
 			sourceTree = "<group>";
 		};
-		18B76CDE2B91B0EE00F6A373 /* Home */ = {
+		18B76CDE2B91B0EE00F6A373 /* HomeTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				187BFC482BB6E50400F7500A /* View */,
+				187BFC472BB6E4F300F7500A /* View Model */,
+				187BFC462BB6E4EF00F7500A /* Model */,
 			);
-			path = Home;
+			path = HomeTabBar;
 			sourceTree = "<group>";
 		};
 		18B76CDF2B91B15E00F6A373 /* Resources */ = {
@@ -326,8 +481,33 @@
 			isa = PBXGroup;
 			children = (
 				18A6B2B02B91EC50000E3209 /* Validation.m */,
+				18A01C922B95EE250033EF21 /* Validation.h */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		18BAF3A12BB2CB7F004D181E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		18BAF3A22BB2CB86004D181E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18BAF3A32BB2CB8A004D181E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18BAF3A42BB2CBAC004D181E /* OTPVerificationVC.h */,
+				18BAF3A52BB2CBAC004D181E /* OTPVerificationVC.m */,
+				18BAF3A62BB2CBAC004D181E /* OTPVerificationVC.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +520,7 @@
 				18B76C9A2B91B05C00F6A373 /* Sources */,
 				18B76C9B2B91B05C00F6A373 /* Frameworks */,
 				18B76C9C2B91B05C00F6A373 /* Resources */,
+				189D5EB02BAC37B3009FF741 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -433,10 +614,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18AB90E62B9884AC00F174E3 /* RegisterHeaderView.xib in Resources */,
+				1878F8032BAADAE9007FA01E /* SubmitButtonTableViewCell.xib in Resources */,
 				18B76CB12B91B05D00F6A373 /* LaunchScreen.storyboard in Resources */,
 				18A6B2AF2B91DE41000E3209 /* TextFieldTableViewCell.xib in Resources */,
 				18B76CAE2B91B05D00F6A373 /* Assets.xcassets in Resources */,
 				18B76CE42B91B69500F6A373 /* LoginVC.xib in Resources */,
+				18BAF3A82BB2CBAC004D181E /* OTPVerificationVC.xib in Resources */,
 				18B76CAC2B91B05C00F6A373 /* Main.storyboard in Resources */,
 				18A6B2A82B91DC9F000E3209 /* RegisterVC.xib in Resources */,
 			);
@@ -463,17 +647,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A01C912B95EBBD0033EF21 /* User.m in Sources */,
+				1878F8022BAADAE9007FA01E /* SubmitButtonTableViewCell.m in Sources */,
 				18A6B2AE2B91DE41000E3209 /* TextFieldTableViewCell.m in Sources */,
+				18AB90E92B98853A00F174E3 /* RegisterHeaderView.m in Sources */,
 				18A01C7F2B959EF30033EF21 /* API Services.m in Sources */,
 				18B76CA32B91B05C00F6A373 /* AppDelegate.m in Sources */,
 				18A6B2B12B91EC50000E3209 /* Validation.m in Sources */,
 				18B76CB42B91B05D00F6A373 /* main.m in Sources */,
 				18A01C792B9599470033EF21 /* API Manager.m in Sources */,
 				18B76CE32B91B69500F6A373 /* LoginVC.m in Sources */,
+				18A01C8A2B95CB580033EF21 /* LoginService.m in Sources */,
 				18A6B2A72B91DC9F000E3209 /* RegisterVC.m in Sources */,
+				18A0519B2BAD60C5004A02D7 /* RegisterService.m in Sources */,
 				18B76CE92B91B6C100F6A373 /* LoginViewModel.m in Sources */,
 				18B76CA62B91B05C00F6A373 /* SceneDelegate.m in Sources */,
 				18A01C862B95A7FE0033EF21 /* NetworkConfiguration.m in Sources */,
+				189D5E762BAC0050009FF741 /* RegisterModel.m in Sources */,
+				18BAF3A72BB2CBAC004D181E /* OTPVerificationVC.m in Sources */,
+				189D5E732BABFDE3009FF741 /* RegisterViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +845,19 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JDQM4MDQ97;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ObjcDemo\\ Project",
+					"$(PROJECT_DIR)/ObjcDemo\\ Project",
+					"$(PROJECT_DIR)/ObjcDemo\\ Project",
+					"$(PROJECT_DIR)/ObjcDemo\\ Project",
+					"$(PROJECT_DIR)/ObjcDemo\\ Project",
+					"$(PROJECT_DIR)/ObjcDemo\\ Project",
+					"$(PROJECT_DIR)/ObjcDemo\\ Project",
+					"$(PROJECT_DIR)/ObjcDemo\\ Project",
+					"$(PROJECT_DIR)/ObjcDemo\\ Project",
+					"$(PROJECT_DIR)/ObjcDemo\\ Project",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ObjcDemo Project/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -679,6 +884,19 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JDQM4MDQ97;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ObjcDemo\\ Project",
+					"$(PROJECT_DIR)/ObjcDemo\\ Project",
+					"$(PROJECT_DIR)/ObjcDemo\\ Project",
+					"$(PROJECT_DIR)/ObjcDemo\\ Project",
+					"$(PROJECT_DIR)/ObjcDemo\\ Project",
+					"$(PROJECT_DIR)/ObjcDemo\\ Project",
+					"$(PROJECT_DIR)/ObjcDemo\\ Project",
+					"$(PROJECT_DIR)/ObjcDemo\\ Project",
+					"$(PROJECT_DIR)/ObjcDemo\\ Project",
+					"$(PROJECT_DIR)/ObjcDemo\\ Project",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ObjcDemo Project/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

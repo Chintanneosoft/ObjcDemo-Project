@@ -19,5 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 // Common Request Function
 - (void)callRequestWithAPICallType:(APIServices *)apiCallType completion:(void (^)(NSData *data, NSError *error))completion;
 
+//- (void)callRequestWithAPICallType:(APIServices *)apiCallType params:(NSDictionary *)params completion:(void (^)(NSData *data, NSError *error))completion;
+
+
 @end
 NS_ASSUME_NONNULL_END

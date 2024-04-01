@@ -6,21 +6,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Validation.h"
 
-@interface Validation : NSObject
-
-- (NSString *)registerValidationWithFirstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email password:(NSString *)password confirmPassword:(NSString *)confirmPassword mobileNumber:(NSString *)mobileNumber;
-
-- (NSString *)loginValidationWithEmail:(NSString *)email password:(NSString *)password;
-
-- (NSString *)resetPassValidationWithOldPass:(NSString *)oldPass newPass:(NSString *)newPass confirmPass:(NSString *)confirmPass;
-
-- (NSString *)updateUserValidationWithFname:(NSString *)fname lname:(NSString *)lname email:(NSString *)email dob:(NSString *)dob profilePic:(NSString *)profilePic phone:(NSString *)phone;
-
-@end
-
+//MARK: - Validation
 @implementation Validation
 
+// For register
 - (NSString *)registerValidationWithFirstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email password:(NSString *)password confirmPassword:(NSString *)confirmPassword mobileNumber:(NSString *)mobileNumber {
     
     if (!firstName || !lastName || !password || !confirmPassword || !email || !mobileNumber || [firstName isEqualToString:@""] || [lastName isEqualToString:@""] || [password isEqualToString:@""] || [confirmPassword isEqualToString:@""] || [email isEqualToString:@""] || [mobileNumber isEqualToString:@""]) {
@@ -54,6 +45,7 @@
     return nil;
 }
 
+//For Login
 - (NSString *)loginValidationWithEmail:(NSString *)email password:(NSString *)password {
     
     if (!email || !password || [email isEqualToString:@""] || [password isEqualToString:@""]) {
@@ -71,6 +63,7 @@
     return nil;
 }
 
+//For Reset Password
 - (NSString *)resetPassValidationWithOldPass:(NSString *)oldPass newPass:(NSString *)newPass confirmPass:(NSString *)confirmPass {
     
     if (!oldPass || !newPass || !confirmPass || [oldPass isEqualToString:@""] || [newPass isEqualToString:@""] || [confirmPass isEqualToString:@""]) {
@@ -88,6 +81,7 @@
     return nil;
 }
 
+// For Update User
 - (NSString *)updateUserValidationWithFname:(NSString *)fname lname:(NSString *)lname email:(NSString *)email dob:(NSString *)dob profilePic:(NSString *)profilePic phone:(NSString *)phone {
     if ([fname isEqualToString:@""] || [lname isEqualToString:@""] || [email isEqualToString:@""] || [dob isEqualToString:@""] || [profilePic isEqualToString:@""] || [phone isEqualToString:@""]) {
         return @"Please fill the required fields";
@@ -111,7 +105,7 @@
     return nil;
 }
 
-
+// Internally used Functions
 - (BOOL)containsOnlyCharacters:(NSString *)input {
     NSCharacterSet *characterSet = [NSCharacterSet letterCharacterSet];
     return [input rangeOfCharacterFromSet:[characterSet invertedSet]].location == NSNotFound;

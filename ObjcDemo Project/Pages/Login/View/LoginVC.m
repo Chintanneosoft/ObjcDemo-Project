@@ -6,20 +6,22 @@
 //
 
 #import "LoginVC.h"
+#import "LoginViewModel.h"
+#import "RegisterVC.h"
+#import "OTPVerificationVC.h"
 
-@interface LoginVC ()
-
-@end
-
+//MARK: - LoginVC
 @implementation LoginVC
 
+//MARK: - Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    
+    self.VM = [[LoginViewModel alloc] init];
+    self.VM.loginViewModelDelegate = self;
     [self setUpUI];
 }
 
+//Functions
 - (void)setDelegates{
     self.txtUserName.delegate = self;
     self.txtPassword.delegate = self;
@@ -33,21 +35,36 @@
     self.btnSignUp.layer.cornerRadius = 40;
 }
 
+- (void) validateUser{
+    [self.VM validateLoginCredentailsWithEmail: self.txtUserName.text password:self.txtPassword.text];
+}
+
+//MARK: - IBActions
 - (IBAction)btnSignUpTapped:(id)sender {
-    
+    RegisterVC *nextVC = [[RegisterVC alloc] init];
+    [self.navigationController pushViewController:nextVC animated:YES];
 }
 
 - (IBAction)btnSubmitTapped:(id)sender {
+    [self validateUser];
+//    OTPVerificationVC *nextVC = [[OTPVerificationVC alloc] init];
+//    [self.navigationController pushViewController:nextVC animated:YES];
 }
 
-/*
-#pragma mark - Navigation
+- (void)validationResultWithMessage:(NSString *)resultMsg {
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Alert"
+                                   message:resultMsg
+                                   preferredStyle:UIAlertControllerStyleAlert];
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+        if ([resultMsg  isEqual: @"Logged In successfully"]){
+            OTPVerificationVC *nextVC = [[OTPVerificationVC alloc] init];
+            [self.navigationController pushViewController:nextVC animated:YES];
+        } 
+    }];
+
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
-*/
 
 @end

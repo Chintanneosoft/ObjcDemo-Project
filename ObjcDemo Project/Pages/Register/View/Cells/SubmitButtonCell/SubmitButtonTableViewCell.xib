@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="134" id="KGk-i7-Jjw" customClass="SubmitButtonTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="353" height="134"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="353" height="134"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="okz-w8-8D5">
+                        <rect key="frame" x="0.0" y="0.0" width="353" height="134"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcv-PI-Dp4">
+                                <rect key="frame" x="40" y="10" width="273" height="114"/>
+                                <color key="backgroundColor" name="secondary"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitBtnTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="kUf-Kn-oQW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="mcv-PI-Dp4" secondAttribute="bottom" constant="10" id="4SW-Eq-Hte"/>
+                            <constraint firstAttribute="trailing" secondItem="mcv-PI-Dp4" secondAttribute="trailing" constant="40" id="ABM-F2-tsy"/>
+                            <constraint firstItem="mcv-PI-Dp4" firstAttribute="leading" secondItem="okz-w8-8D5" secondAttribute="leading" constant="40" id="JpF-39-yOm"/>
+                            <constraint firstItem="mcv-PI-Dp4" firstAttribute="top" secondItem="okz-w8-8D5" secondAttribute="top" constant="10" id="pBa-VP-5KA"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="okz-w8-8D5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3XA-Ke-BVh"/>
+                    <constraint firstAttribute="bottom" secondItem="okz-w8-8D5" secondAttribute="bottom" id="EyS-2r-3eC"/>
+                    <constraint firstItem="okz-w8-8D5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Voi-sa-HIl"/>
+                    <constraint firstAttribute="trailing" secondItem="okz-w8-8D5" secondAttribute="trailing" id="fXF-hA-1ca"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="tableViewBtn" destination="mcv-PI-Dp4" id="kYz-uq-eAe"/>
+            </connections>
+            <point key="canvasLocation" x="109.16030534351144" y="51.408450704225352"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="secondary">
+            <color red="0.62699997425079346" green="0.52499997615814209" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
