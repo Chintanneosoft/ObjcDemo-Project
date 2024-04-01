@@ -8,10 +8,9 @@
 #import "LoginViewModel.h"
 #import "Validation.h"
 #import "LoginService.h"
-
+//MARK: - LoginViewModel
 @implementation LoginViewModel
-
-
+// Function to validate and send for API Call
 - (void)validateLoginCredentailsWithEmail: (NSString *)email password:(NSString *)password{
     
     Validation *valid = [[Validation alloc] init];
@@ -24,9 +23,16 @@
                 [[NSUserDefaults standardUserDefaults] setObject:user.data.access_token ? user.data.access_token : @"" forKey: @"accessToken"];
 //                [[NSUserDefaults standardUserDefaults] setObject:user.firstName ? user.firstName : @"" forKey:UserDefaultsKeysUserFirstName];
 //                [self.loginViewModelDelegate showAlertWithResult:YES message:user.userMsg];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.loginViewModelDelegate validationResultWithMessage: user.user_msg];
+                });
+               
                 NSLog(@"%@", user.user_msg);
             } else if (userFailure != nil) {
 //                [self.loginViewModelDelegate showAlertWithResult:NO message:userFailure.userMsg];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.loginViewModelDelegate validationResultWithMessage: userFailure.user_msg];
+                });
                 NSLog(@"%@", userFailure.user_msg);
             } else if (error != nil) {
                 NSLog(@"%@", error.localizedDescription);
@@ -34,6 +40,9 @@
             }
         }];
     } else {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.loginViewModelDelegate validationResultWithMessage: validationResult];
+        });
         NSLog(@"%@", validationResult);
     }
 }

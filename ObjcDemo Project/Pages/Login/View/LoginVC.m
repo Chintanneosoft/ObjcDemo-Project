@@ -10,15 +10,18 @@
 #import "RegisterVC.h"
 #import "OTPVerificationVC.h"
 
+//MARK: - LoginVC
 @implementation LoginVC
 
+//MARK: - Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     self.VM = [[LoginViewModel alloc] init];
+    self.VM.loginViewModelDelegate = self;
     [self setUpUI];
 }
 
+//Functions
 - (void)setDelegates{
     self.txtUserName.delegate = self;
     self.txtPassword.delegate = self;
@@ -36,17 +39,32 @@
     [self.VM validateLoginCredentailsWithEmail: self.txtUserName.text password:self.txtPassword.text];
 }
 
-
+//MARK: - IBActions
 - (IBAction)btnSignUpTapped:(id)sender {
     RegisterVC *nextVC = [[RegisterVC alloc] init];
     [self.navigationController pushViewController:nextVC animated:YES];
 }
 
 - (IBAction)btnSubmitTapped:(id)sender {
-//    [self validateUser];
-    OTPVerificationVC *nextVC = [[OTPVerificationVC alloc] init];
-    [self.navigationController pushViewController:nextVC animated:YES];
+    [self validateUser];
+//    OTPVerificationVC *nextVC = [[OTPVerificationVC alloc] init];
+//    [self.navigationController pushViewController:nextVC animated:YES];
 }
 
+- (void)validationResultWithMessage:(NSString *)resultMsg {
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Alert"
+                                   message:resultMsg
+                                   preferredStyle:UIAlertControllerStyleAlert];
+
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+        if ([resultMsg  isEqual: @"Logged In successfully"]){
+            OTPVerificationVC *nextVC = [[OTPVerificationVC alloc] init];
+            [self.navigationController pushViewController:nextVC animated:YES];
+        } 
+    }];
+
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
 
 @end

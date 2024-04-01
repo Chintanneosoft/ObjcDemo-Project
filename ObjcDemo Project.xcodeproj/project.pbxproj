@@ -400,7 +400,7 @@
 		18B76CDA2B91B0CD00F6A373 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				18B76CDE2B91B0EE00F6A373 /* Home */,
+				18B76CDE2B91B0EE00F6A373 /* HomeTabBar */,
 				18B76CDD2B91B0E100F6A373 /* OTPVerification */,
 				18B76CDC2B91B0DB00F6A373 /* Register */,
 				18B76CDB2B91B0D600F6A373 /* Login */,
@@ -440,14 +440,14 @@
 			path = OTPVerification;
 			sourceTree = "<group>";
 		};
-		18B76CDE2B91B0EE00F6A373 /* Home */ = {
+		18B76CDE2B91B0EE00F6A373 /* HomeTabBar */ = {
 			isa = PBXGroup;
 			children = (
 				187BFC482BB6E50400F7500A /* View */,
 				187BFC472BB6E4F300F7500A /* View Model */,
 				187BFC462BB6E4EF00F7500A /* Model */,
 			);
-			path = Home;
+			path = HomeTabBar;
 			sourceTree = "<group>";
 		};
 		18B76CDF2B91B15E00F6A373 /* Resources */ = {

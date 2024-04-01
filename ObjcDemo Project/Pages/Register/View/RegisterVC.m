@@ -10,9 +10,10 @@
 #import "SubmitButtonTableViewCell.h"
 #import "RegisterHeaderView.h"
 
-
+//MARK: - RegisterVC
 @implementation RegisterVC
 
+//MARK: - Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -36,11 +37,10 @@
     
     [self.registerTableView registerNib:[UINib nibWithNibName:@"TextFieldTableViewCell" bundle:nil] forCellReuseIdentifier: @"TextFieldTableViewCell"];
     [self.registerTableView registerNib:[UINib nibWithNibName:@"SubmitButtonTableViewCell" bundle:nil] forCellReuseIdentifier: @"SubmitButtonTableViewCell"];
-    
     [self.registerTableView registerNib:[UINib nibWithNibName:@"RegisterHeaderView" bundle:nil] forCellReuseIdentifier:@"RegisterHeaderView"];
-    
 }
 
+//MARK: - TableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 0){
         return 7;
@@ -84,6 +84,7 @@
         }
         return cell;
     }
+    
     SubmitButtonTableViewCell *buttonCell = [tableView dequeueReusableCellWithIdentifier:@"SubmitButtonTableViewCell" forIndexPath:indexPath];
     buttonCell.submitButtonTapHandler = ^(SubmitButtonTableViewCell *cell) {
         [self sendForValidation];
@@ -131,18 +132,8 @@
     return 0;
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (void)tableViewCellDidSubmitTextFieldValues:(NSString *)textFieldValue textFieldtag:(NSInteger)tag { 
+//MARK: - TextFieldTableViewCellDelegate Protocol 
+- (void)tableViewCellDidSubmitTextFieldValues:(NSString *)textFieldValue textFieldtag:(NSInteger)tag {
     switch (tag) {
         case 1:
             _VM.registerInputData[@"firstName"] = textFieldValue;

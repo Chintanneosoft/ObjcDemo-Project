@@ -7,9 +7,9 @@
 
 #import <Foundation/Foundation.h>
 #import "User.h"
-
+//MARK: - User
 @implementation User
-
+// For coverting Data to User Model
 - (instancetype)initWithData:(NSData *)data error:(NSError **)error {
     self = [super init];
     if (self) {
@@ -33,12 +33,11 @@
     }
     return self;
 }
-
 @end
 
 // UserData.m
 @implementation UserData
-
+// For coverting Dictionary to UserData Model
 - (instancetype)initWithDictionary:(NSDictionary *)dict {
     self = [super init];
     if (self) {
@@ -63,9 +62,9 @@
 
 @end
 
-
+//MARK: - UserFailure
 @implementation UserFailure
-
+// For coverting Data to UserFailure Model
 - (instancetype)initWithData:(NSData *)data error:(NSError **)error {
     self = [super init];
     if (self) {
@@ -79,13 +78,11 @@
             if ([dataObject isKindOfClass:[NSNumber class]]) {
                 _data = [dataObject boolValue];
             } else {
-                // Handle the case where dataObject is not a number
-                // You might want to set _data to NO, or set an error
+                NSLog(@"%@", _user_msg);
             }
         }
     }
     return self;
 }
-
 
 @end

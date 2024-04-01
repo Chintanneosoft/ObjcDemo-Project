@@ -21,9 +21,8 @@
         txt.textAlignment = NSTextAlignmentCenter;
         txt.textColor = [UIColor whiteColor];
         txt.keyboardType = UIKeyboardTypeNumberPad;
+        txt.tintColor = UIColor.clearColor;
     }
-    
-   
 }
 - (IBAction)btnVerifyOTPTapped:(id)sender {
     

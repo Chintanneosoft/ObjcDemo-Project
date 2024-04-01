@@ -9,9 +9,10 @@
 #import "LoginViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
+//MARK: - LoginVC
+@interface LoginVC : UIViewController<UITextFieldDelegate,LoginViewModelDelegate>
 
-@interface LoginVC : UIViewController<UITextFieldDelegate>
-
+//MARK: - IBOutlets
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UILabel *lblLogin;
 @property (weak, nonatomic) IBOutlet UITextField *txtUserName;
@@ -21,8 +22,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *btnSignUp;
 @property (weak, nonatomic) IBOutlet UIButton *btnSubmit;
 
+//ViewModel
 @property (strong, nonatomic) LoginViewModel *VM;
 
+//IBActions
 - (IBAction)btnSignUpTapped:(id)sender;
 - (IBAction)btnSubmitTapped:(id)sender;
 

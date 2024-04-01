@@ -8,8 +8,9 @@
 #import "LoginService.h"
 #import "API Manager.h"
 
+//MARK: - LoginService
 @implementation LoginService
-
+// Static Function for login
 + (void)loginUserWithEmail:(NSString *)email password:(NSString *)password completion:(CompletionBlock)completion {
         
     NSDictionary *params = @{@"email" : email, @"password" : password};
@@ -35,8 +36,5 @@
                 }
             }];
         }
-
-
-
 
 @end

@@ -9,8 +9,9 @@
 #import "User.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
+//MARK: - LoginService
 @interface LoginService : NSObject
+// Type alias
 typedef void(^CompletionBlock)(User * _Nullable user, UserFailure * _Nullable userFailure, NSError * _Nullable error);
 
 + (void)loginUserWithEmail:(NSString *)email password:(NSString *)password completion:(CompletionBlock)completion ;
