@@ -8,10 +8,11 @@
 #import <UIKit/UIKit.h>
 #import "TextFieldTableViewCellDelegate.h"
 #import "RegisterViewModel.h"
+#import "BaseVC.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RegisterVC : UIViewController<UITableViewDelegate,UITableViewDataSource,TextFieldTableViewCellDelegate>
+@interface RegisterVC : BaseVC<UITableViewDelegate,UITableViewDataSource,TextFieldTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *registerTableView;
 
 @property (strong, nonatomic) RegisterViewModel *VM;

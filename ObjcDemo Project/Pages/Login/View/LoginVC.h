@@ -7,10 +7,11 @@
 
 #import <UIKit/UIKit.h>
 #import "LoginViewModel.h"
+#import "BaseVC.h"
 
 NS_ASSUME_NONNULL_BEGIN
 //MARK: - LoginVC
-@interface LoginVC : UIViewController<UITextFieldDelegate,LoginViewModelDelegate>
+@interface LoginVC : BaseVC<UITextFieldDelegate,LoginViewModelDelegate>
 
 //MARK: - IBOutlets
 @property (weak, nonatomic) IBOutlet UIView *containerView;

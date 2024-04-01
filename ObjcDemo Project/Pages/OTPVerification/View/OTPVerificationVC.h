@@ -6,10 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseVC.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OTPVerificationVC : UIViewController<UITextFieldDelegate>
+@interface OTPVerificationVC : BaseVC<UITextFieldDelegate>
 @property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *txtOTPCollection;
 
 @end

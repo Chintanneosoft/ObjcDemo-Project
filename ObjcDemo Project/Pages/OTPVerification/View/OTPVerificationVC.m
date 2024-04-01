@@ -6,6 +6,7 @@
 //
 
 #import "OTPVerificationVC.h"
+#import "TabBarVC.h"
 
 @implementation OTPVerificationVC
 
@@ -25,7 +26,8 @@
     }
 }
 - (IBAction)btnVerifyOTPTapped:(id)sender {
-    
+    TabBarVC *nextVC = [[TabBarVC alloc] init];
+    [self.navigationController pushViewController:nextVC animated:YES];
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
