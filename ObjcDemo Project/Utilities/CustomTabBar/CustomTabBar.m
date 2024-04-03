@@ -11,7 +11,9 @@
 
 - (CGSize)sizeThatFits:(CGSize)size {
     CGSize sizeThatFits = [super sizeThatFits:size];
-    sizeThatFits.height = 100;
+    if (!isiPhoneSE()){
+        sizeThatFits.height = 85;
+    }
     return sizeThatFits;
 }
 

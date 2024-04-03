@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.VM = [[LoginViewModel alloc] init];
-    self.VM.loginViewModelDelegate = self;
+    self.VM.resultMessageDelegate = self;
     [self setUpUI];
 }
 
@@ -51,7 +51,7 @@
 //    [self.navigationController pushViewController:nextVC animated:YES];
 }
 
-- (void)validationResultWithMessage:(NSString *)resultMsg {
+- (void)resultWithMessage:(NSString *)resultMsg {
     UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Alert"
                                    message:resultMsg
                                    preferredStyle:UIAlertControllerStyleAlert];

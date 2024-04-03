@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 //MARK: - LoginVC
-@interface LoginVC : BaseVC<UITextFieldDelegate,LoginViewModelDelegate>
+@interface LoginVC : BaseVC<UITextFieldDelegate,ResultMessageDelegate>
 
 //MARK: - IBOutlets
 @property (weak, nonatomic) IBOutlet UIView *containerView;

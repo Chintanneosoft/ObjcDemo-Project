@@ -23,8 +23,8 @@
     if ([scene isKindOfClass:[UIWindowScene class]]) {
         UIWindowScene *windowScene = (UIWindowScene *)scene;
         UIWindow *window = [[UIWindow alloc] initWithWindowScene:windowScene];
-//        LoginVC *viewController = [[LoginVC alloc] init];
-        TabBarVC *viewController = [[TabBarVC alloc] init];;
+        LoginVC *viewController = [[LoginVC alloc] init];
+//        TabBarVC *viewController = [[TabBarVC alloc] init];;
         UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
         window.rootViewController = navigationController;
         self.window = window;

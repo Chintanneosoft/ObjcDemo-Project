@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) RegisterViewModel *VM;
 - (void)sendForValidation;
+- (void)setTableView ;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -16,7 +16,6 @@
 //MARK: - Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     [self setTableView];
     [self setUpUI];
     _VM = [[RegisterViewModel alloc] init];

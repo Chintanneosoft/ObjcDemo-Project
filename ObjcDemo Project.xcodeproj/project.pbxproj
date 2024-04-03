@@ -48,6 +48,14 @@
 		18B76CE92B91B6C100F6A373 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B76CE82B91B6C100F6A373 /* LoginViewModel.m */; };
 		18BAF3A72BB2CBAC004D181E /* OTPVerificationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BAF3A52BB2CBAC004D181E /* OTPVerificationVC.m */; };
 		18BAF3A82BB2CBAC004D181E /* OTPVerificationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BAF3A62BB2CBAC004D181E /* OTPVerificationVC.xib */; };
+		18E029CF2BBD32AD0085A330 /* HomeCategoriesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E029CD2BBD32AD0085A330 /* HomeCategoriesTableViewCell.m */; };
+		18E029D02BBD32AD0085A330 /* HomeCategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E029CE2BBD32AD0085A330 /* HomeCategoriesTableViewCell.xib */; };
+		18E029D52BBD33550085A330 /* HomeProductListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E029D32BBD33550085A330 /* HomeProductListCollectionViewCell.m */; };
+		18E029D62BBD33550085A330 /* HomeProductListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E029D42BBD33550085A330 /* HomeProductListCollectionViewCell.xib */; };
+		18E029D92BBD3C9D0085A330 /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E029D82BBD3C9D0085A330 /* HomeViewModel.m */; };
+		18E029DE2BBD59F80085A330 /* CommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E029DD2BBD59F80085A330 /* CommonFunctions.m */; };
+		18E029E22BBD60B50085A330 /* HomeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E029E12BBD60B50085A330 /* HomeService.m */; };
+		18E029E52BBD62C20085A330 /* Products.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E029E42BBD62C20085A330 /* Products.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +160,21 @@
 		18BAF3A42BB2CBAC004D181E /* OTPVerificationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTPVerificationVC.h; sourceTree = "<group>"; };
 		18BAF3A52BB2CBAC004D181E /* OTPVerificationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTPVerificationVC.m; sourceTree = "<group>"; };
 		18BAF3A62BB2CBAC004D181E /* OTPVerificationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPVerificationVC.xib; sourceTree = "<group>"; };
+		18E029CC2BBD32AD0085A330 /* HomeCategoriesTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCategoriesTableViewCell.h; sourceTree = "<group>"; };
+		18E029CD2BBD32AD0085A330 /* HomeCategoriesTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCategoriesTableViewCell.m; sourceTree = "<group>"; };
+		18E029CE2BBD32AD0085A330 /* HomeCategoriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCategoriesTableViewCell.xib; sourceTree = "<group>"; };
+		18E029D22BBD33550085A330 /* HomeProductListCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeProductListCollectionViewCell.h; sourceTree = "<group>"; };
+		18E029D32BBD33550085A330 /* HomeProductListCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeProductListCollectionViewCell.m; sourceTree = "<group>"; };
+		18E029D42BBD33550085A330 /* HomeProductListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeProductListCollectionViewCell.xib; sourceTree = "<group>"; };
+		18E029D72BBD3C9D0085A330 /* HomeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewModel.h; sourceTree = "<group>"; };
+		18E029D82BBD3C9D0085A330 /* HomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewModel.m; sourceTree = "<group>"; };
+		18E029DC2BBD59F80085A330 /* CommonFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonFunctions.h; sourceTree = "<group>"; };
+		18E029DD2BBD59F80085A330 /* CommonFunctions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonFunctions.m; sourceTree = "<group>"; };
+		18E029E02BBD60B50085A330 /* HomeService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeService.h; sourceTree = "<group>"; };
+		18E029E12BBD60B50085A330 /* HomeService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeService.m; sourceTree = "<group>"; };
+		18E029E32BBD62C20085A330 /* Products.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Products.h; sourceTree = "<group>"; };
+		18E029E42BBD62C20085A330 /* Products.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Products.m; sourceTree = "<group>"; };
+		18E029E72BBD8BE40085A330 /* Protocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Protocols.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +213,7 @@
 		18732E232BBAD2A9000C0CA8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				18E029DF2BBD60960085A330 /* HomeService */,
 				18732E3D2BBAD499000C0CA8 /* Model */,
 				18732E3C2BBAD492000C0CA8 /* ViewModel */,
 				18732E372BBAD418000C0CA8 /* View */,
@@ -240,6 +264,7 @@
 		18732E372BBAD418000C0CA8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18E029CA2BBD32570085A330 /* Cells */,
 				18732E262BBAD30C000C0CA8 /* HomeVC.h */,
 				18732E272BBAD30C000C0CA8 /* HomeVC.m */,
 				18732E282BBAD30C000C0CA8 /* HomeVC.xib */,
@@ -278,6 +303,8 @@
 		18732E3C2BBAD492000C0CA8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				18E029D72BBD3C9D0085A330 /* HomeViewModel.h */,
+				18E029D82BBD3C9D0085A330 /* HomeViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -285,6 +312,8 @@
 		18732E3D2BBAD499000C0CA8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18E029E32BBD62C20085A330 /* Products.h */,
+				18E029E42BBD62C20085A330 /* Products.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -641,6 +670,8 @@
 		18B76CEA2B91B80A00F6A373 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				18E029E62BBD8BC40085A330 /* Protocols */,
+				18E029DB2BBD59E20085A330 /* Common Functions */,
 				18732E432BBAF0BD000C0CA8 /* CustomTabBar */,
 				18732E3F2BBAEA38000C0CA8 /* Base Class */,
 				18732E3E2BBAEA2D000C0CA8 /* Validation */,
@@ -670,6 +701,61 @@
 				18BAF3A62BB2CBAC004D181E /* OTPVerificationVC.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		18E029CA2BBD32570085A330 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				18E029D12BBD32F30085A330 /* HomeProductListCollectionViewCell */,
+				18E029CB2BBD325F0085A330 /* HomeCategoriesTableViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		18E029CB2BBD325F0085A330 /* HomeCategoriesTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				18E029CC2BBD32AD0085A330 /* HomeCategoriesTableViewCell.h */,
+				18E029CD2BBD32AD0085A330 /* HomeCategoriesTableViewCell.m */,
+				18E029CE2BBD32AD0085A330 /* HomeCategoriesTableViewCell.xib */,
+			);
+			path = HomeCategoriesTableViewCell;
+			sourceTree = "<group>";
+		};
+		18E029D12BBD32F30085A330 /* HomeProductListCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				18E029D22BBD33550085A330 /* HomeProductListCollectionViewCell.h */,
+				18E029D32BBD33550085A330 /* HomeProductListCollectionViewCell.m */,
+				18E029D42BBD33550085A330 /* HomeProductListCollectionViewCell.xib */,
+			);
+			path = HomeProductListCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		18E029DB2BBD59E20085A330 /* Common Functions */ = {
+			isa = PBXGroup;
+			children = (
+				18E029DC2BBD59F80085A330 /* CommonFunctions.h */,
+				18E029DD2BBD59F80085A330 /* CommonFunctions.m */,
+			);
+			path = "Common Functions";
+			sourceTree = "<group>";
+		};
+		18E029DF2BBD60960085A330 /* HomeService */ = {
+			isa = PBXGroup;
+			children = (
+				18E029E02BBD60B50085A330 /* HomeService.h */,
+				18E029E12BBD60B50085A330 /* HomeService.m */,
+			);
+			path = HomeService;
+			sourceTree = "<group>";
+		};
+		18E029E62BBD8BC40085A330 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				18E029E72BBD8BE40085A330 /* Protocols.h */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -776,6 +862,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E029D62BBD33550085A330 /* HomeProductListCollectionViewCell.xib in Resources */,
 				18AB90E62B9884AC00F174E3 /* RegisterHeaderView.xib in Resources */,
 				1878F8032BAADAE9007FA01E /* SubmitButtonTableViewCell.xib in Resources */,
 				18732E222BBACCB8000C0CA8 /* TabBarVC.xib in Resources */,
@@ -784,6 +871,7 @@
 				18A6B2AF2B91DE41000E3209 /* TextFieldTableViewCell.xib in Resources */,
 				18732E2A2BBAD30C000C0CA8 /* HomeVC.xib in Resources */,
 				18B76CAE2B91B05D00F6A373 /* Assets.xcassets in Resources */,
+				18E029D02BBD32AD0085A330 /* HomeCategoriesTableViewCell.xib in Resources */,
 				18B76CE42B91B69500F6A373 /* LoginVC.xib in Resources */,
 				18BAF3A82BB2CBAC004D181E /* OTPVerificationVC.xib in Resources */,
 				18B76CAC2B91B05C00F6A373 /* Main.storyboard in Resources */,
@@ -820,24 +908,30 @@
 				18732E292BBAD30C000C0CA8 /* HomeVC.m in Sources */,
 				18732E2E2BBAD323000C0CA8 /* ProfileVC.m in Sources */,
 				18AB90E92B98853A00F174E3 /* RegisterHeaderView.m in Sources */,
+				18E029E52BBD62C20085A330 /* Products.m in Sources */,
 				18A01C7F2B959EF30033EF21 /* API Services.m in Sources */,
 				18B76CA32B91B05C00F6A373 /* AppDelegate.m in Sources */,
 				18A6B2B12B91EC50000E3209 /* Validation.m in Sources */,
 				18B76CB42B91B05D00F6A373 /* main.m in Sources */,
 				18A01C792B9599470033EF21 /* API Manager.m in Sources */,
+				18E029E22BBD60B50085A330 /* HomeService.m in Sources */,
 				18B76CE32B91B69500F6A373 /* LoginVC.m in Sources */,
 				18A01C8A2B95CB580033EF21 /* LoginService.m in Sources */,
+				18E029CF2BBD32AD0085A330 /* HomeCategoriesTableViewCell.m in Sources */,
 				18A6B2A72B91DC9F000E3209 /* RegisterVC.m in Sources */,
 				18A0519B2BAD60C5004A02D7 /* RegisterService.m in Sources */,
 				18732E422BBAEBA6000C0CA8 /* BaseVC.m in Sources */,
 				18B76CE92B91B6C100F6A373 /* LoginViewModel.m in Sources */,
 				18B76CA62B91B05C00F6A373 /* SceneDelegate.m in Sources */,
 				18A01C862B95A7FE0033EF21 /* NetworkConfiguration.m in Sources */,
+				18E029D52BBD33550085A330 /* HomeProductListCollectionViewCell.m in Sources */,
 				189D5E762BAC0050009FF741 /* RegisterModel.m in Sources */,
+				18E029D92BBD3C9D0085A330 /* HomeViewModel.m in Sources */,
 				18BAF3A72BB2CBAC004D181E /* OTPVerificationVC.m in Sources */,
 				18732E332BBAD374000C0CA8 /* CartVC.m in Sources */,
 				18732E212BBACCB8000C0CA8 /* TabBarVC.m in Sources */,
 				189D5E732BABFDE3009FF741 /* RegisterViewModel.m in Sources */,
+				18E029DE2BBD59F80085A330 /* CommonFunctions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

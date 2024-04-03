@@ -6,26 +6,42 @@
 //
 
 #import "HomeVC.h"
+#import "RegisterVC.h"
+#import "HomeCategoriesTableViewCell.h"
 
-@interface HomeVC ()
-
-@end
-
+//MARK: - HomeVC
 @implementation HomeVC
 
+//MARK: - LifeCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self setTableView];
+    self.VM = [[HomeViewModel alloc] init];
+    self.view.backgroundColor = [UIColor colorNamed:@"primary"];
 }
 
-/*
-#pragma mark - Navigation
+- (void)setTableView{
+    self.homeTableView.delegate = self;
+    self.homeTableView.dataSource = self;
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [self.homeTableView registerNib:[UINib nibWithNibName:@"HomeCategoriesTableViewCell" bundle:nil] forCellReuseIdentifier: @"HomeCategoriesTableViewCell"];
 }
-*/
+
+//MARK: - TableView Functions
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    HomeCategoriesTableViewCell *categoryCell = [tableView dequeueReusableCellWithIdentifier:@"HomeCategoriesTableViewCell" forIndexPath:indexPath];
+    
+    return  categoryCell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return (NSInteger)self.VM.categoryProductList[section];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 4;
+}
+
+
 
 @end

@@ -6,18 +6,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Protocols.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 //MARK: - LoginViewModelDelegate
-@protocol LoginViewModelDelegate <NSObject>
-- (void) validationResultWithMessage: (NSString *)resultMsg;
-@end
+
 
 //MARK: - LoginViewModel
 @interface LoginViewModel : NSObject
 
-@property (weak,nonatomic) id<LoginViewModelDelegate> loginViewModelDelegate;
+@property (weak,nonatomic) id<ResultMessageDelegate> resultMessageDelegate;
 
 - (void)validateLoginCredentailsWithEmail: (NSString *)email password:(NSString *)password;
 

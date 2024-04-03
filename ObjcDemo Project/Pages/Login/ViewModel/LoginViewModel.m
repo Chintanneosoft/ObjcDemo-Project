@@ -24,14 +24,14 @@
 //                [[NSUserDefaults standardUserDefaults] setObject:user.firstName ? user.firstName : @"" forKey:UserDefaultsKeysUserFirstName];
 //                [self.loginViewModelDelegate showAlertWithResult:YES message:user.userMsg];
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.loginViewModelDelegate validationResultWithMessage: user.user_msg];
+                    [self.resultMessageDelegate resultWithMessage: user.user_msg];
                 });
                
                 NSLog(@"%@", user.user_msg);
             } else if (userFailure != nil) {
 //                [self.loginViewModelDelegate showAlertWithResult:NO message:userFailure.userMsg];
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.loginViewModelDelegate validationResultWithMessage: userFailure.user_msg];
+                    [self.resultMessageDelegate resultWithMessage: userFailure.user_msg];
                 });
                 NSLog(@"%@", userFailure.user_msg);
             } else if (error != nil) {
@@ -41,7 +41,7 @@
         }];
     } else {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.loginViewModelDelegate validationResultWithMessage: validationResult];
+            [self.resultMessageDelegate resultWithMessage: validationResult];
         });
         NSLog(@"%@", validationResult);
     }
