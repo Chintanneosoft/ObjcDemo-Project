@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TabBarVC : UITabBarController
 
 - (void)setTabbar;
-
+-(void) setNavBar;
 @end
 
 NS_ASSUME_NONNULL_END

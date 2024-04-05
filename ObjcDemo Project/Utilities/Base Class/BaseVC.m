@@ -16,13 +16,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear: animated];
     [self setNavBar];
 }
 
 - (void)setNavBar {
     self.navigationItem.backButtonTitle = @"";
     self.navigationController.navigationBar.tintColor = UIColor.whiteColor;
-    self.navigationController.navigationBar.backgroundColor = [UIColor colorNamed:@"secondary"];
 }
 
 - (void)showAlertWithTitle: (NSString *)title message: (NSString *)message completion:(void (^)(void))completion {

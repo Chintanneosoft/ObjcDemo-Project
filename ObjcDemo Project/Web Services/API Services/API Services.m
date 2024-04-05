@@ -32,48 +32,49 @@ NSString *contentKey = @"Content-Type";
             break;
         case APIServiceUserLogin:
             urlPath = @"users/login";
+            break;
         case APIServiceForgotPass:
             urlPath = @"users/forgot";
-                    break;
+            break;
         case APIServiceUpdatePass:
             urlPath = @"users/change";
-                    break;
+            break;
         case APIServiceUpdateUser:
             urlPath = @"users/update";
-                    break;
+            break;
         case APIServiceFetchUser:
             urlPath = @"users/getUserData";
-                    break;
+            break;
         case APIServiceFetchProductsList:
             urlPath = @"products/getList";
-                    break;
+            break;
         case APIServiceFetchProductsDetails:
             urlPath = @"products/getDetail";
-                    break;
+            break;
         case APIServiceSetRatings:
             urlPath = @"products/setRating";
-                    break;
+            break;
         case APIServiceAddToCart:
             urlPath = @"addToCart";
-                    break;
+            break;
         case APIServiceUpdateCart:
             urlPath = @"editCart";
-                    break;
+            break;
         case APIServiceDeleteCart:
             urlPath = @"deleteCart";
-                    break;
+            break;
         case APIServiceGetCart:
             urlPath = @"cart";
-                    break;
+            break;
         case APIServicePlaceOrder:
             urlPath = @"order";
-                    break;
+            break;
         case APIServiceGetOrderList:
             urlPath = @"orderList";
-                    break;
+            break;
         case APIServiceGetOrderDetail:
             urlPath = @"orderDetail";
-                    break;
+            break;
         default:
             break;
     }

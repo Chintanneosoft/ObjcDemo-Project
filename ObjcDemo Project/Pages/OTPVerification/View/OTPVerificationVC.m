@@ -26,10 +26,11 @@
     }
 }
 - (IBAction)btnVerifyOTPTapped:(id)sender {
-    TabBarVC *nextVC = [[TabBarVC alloc] init];
+    TabBarVC *rootViewController = [[TabBarVC alloc] init];
     SceneDelegate *sceneDelegate = (SceneDelegate *)UIApplication.sharedApplication.connectedScenes.allObjects.firstObject.delegate;
     UIWindow *window = sceneDelegate.window;
-    window.rootViewController = nextVC;
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController: rootViewController];
+    window.rootViewController = navigationController;
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {

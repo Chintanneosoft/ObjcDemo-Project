@@ -23,14 +23,24 @@
     if ([scene isKindOfClass:[UIWindowScene class]]) {
         UIWindowScene *windowScene = (UIWindowScene *)scene;
         UIWindow *window = [[UIWindow alloc] initWithWindowScene:windowScene];
+        UIViewController *viewController = [[UIViewController alloc] init];
         if (!(![[NSUserDefaults standardUserDefaults] stringForKey: @"accessToken"] || [[[NSUserDefaults standardUserDefaults] stringForKey: @"accessToken"] isEqualToString:@""])) {
-            TabBarVC *viewController = [[TabBarVC alloc] init];
-                UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController: viewController];
-            window.rootViewController = navigationController;
-            } else {
-                UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController: [[LoginVC alloc] init]];
-                window.rootViewController = navigationController;
-            }
+            viewController = (TabBarVC *)[[TabBarVC alloc] init];
+        } else {
+            viewController = (LoginVC *)[[LoginVC alloc] initWithNibName:@"LoginVC" bundle:nil];
+        }
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController: viewController];
+        
+        UINavigationBarAppearance *navigationBarAppearance = [[UINavigationBarAppearance alloc] init];
+        [navigationBarAppearance configureWithOpaqueBackground];
+        navigationBarAppearance.backgroundColor = [UIColor colorNamed:@"secondary"];
+        UIFont *font = [UIFont fontWithName:@"KohinoorDevanagari-Semibold" size:28.0f];
+        NSDictionary *titleTextAttributes = @{NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.whiteColor};
+        navigationBarAppearance.titleTextAttributes = titleTextAttributes;
+        navigationController.navigationBar.standardAppearance = navigationBarAppearance;
+        navigationController.navigationBar.scrollEdgeAppearance = navigationBarAppearance;
+
+        window.rootViewController = navigationController;
         self.window = window;
         [window makeKeyAndVisible];
     }

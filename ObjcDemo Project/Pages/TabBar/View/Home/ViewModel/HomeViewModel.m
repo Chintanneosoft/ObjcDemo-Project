@@ -17,8 +17,8 @@ dispatch_group_t group;
     self = [super init];
     self.categoryIdDict = @{
         @1 : @"Table",
-        @2 : @"Sofa",
-        @3 : @"Chair",
+        @2 : @"Chair",
+        @3 : @"Sofa",
         @4 : @"Cupboard"
     };
     self.categoryProductList = [[NSMutableArray alloc] init];

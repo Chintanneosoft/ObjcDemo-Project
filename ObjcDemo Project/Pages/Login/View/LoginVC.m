@@ -21,6 +21,11 @@
     [self setUpUI];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
 //Functions
 - (void)setDelegates{
     self.txtUserName.delegate = self;

@@ -20,6 +20,16 @@ CustomTabBar *customTabBar;
     [self setTabbar];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self setNavBar];
+}
+
+-(void) setNavBar{
+    [self.navigationController setNavigationBarHidden:NO];
+    self.title = @"NeoSTORE";
+}
+
 - (void)setTabbar{
     customTabBar = [[CustomTabBar alloc] init];
     [self setValue:customTabBar forKey:@"tabBar"];
@@ -38,15 +48,17 @@ CustomTabBar *customTabBar;
     
     cartVC.title = @"Cart";
     cartVC.tabBarItem.image = [UIImage systemImageNamed:@"cart.fill"];
-
+    
     // Create an array of view controllers
     NSArray *vc = @[profileVC, homeVC, cartVC];
-       
+    self.viewControllers = vc;
+    
     self.tabBar.backgroundColor = [UIColor colorNamed:@"secondary"];
     self.tabBar.tintColor = UIColor.whiteColor;
+    self.tabBar.barTintColor = [UIColor colorNamed:@"secondary"];
     self.tabBar.unselectedItemTintColor = [UIColor colorNamed:@"primary"];
-    self.viewControllers = vc;
+    self.tabBar.translucent = NO;
     self.selectedIndex = 1;
+    
 }
-
 @end
