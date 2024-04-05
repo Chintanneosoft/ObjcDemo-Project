@@ -8,17 +8,38 @@
 #import "Products.h"
 //MARK: - Products
 @implementation Products
-- (instancetype)initWithDictionary:(NSDictionary *)dict {
+- (instancetype)initWithData:(NSData *)data error:(NSError **)error {
     self = [super init];
     if (self) {
-        _status = dict[@"status"];
-        _data = dict[@"data"]; // You need to convert each dictionary in this array to a ProductsData object
-        _message = dict[@"message"];
-        _userMsg = dict[@"user_msg"];
+        NSError *jsonError;
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+        if (jsonError) {
+            *error = jsonError;
+            return nil;
+        }
+
+        // Initialize the User object with values from the JSON object.
+        _status = json[@"status"];
+        _message = json[@"message"];
+        _userMsg = json[@"user_msg"];
+
+        // For the 'data' property, we need to create a UserData object.
+        NSArray *userDataArray = json[@"data"];
+        NSMutableArray *dataArray = [[NSMutableArray alloc] init];
+
+        if (userDataArray) {
+            for (NSDictionary *userDataDict in userDataArray) {
+                ProductsData *productData = [[ProductsData alloc] initWithDictionary:userDataDict];
+                [dataArray addObject:productData];
+            }
+        }
+
+        _data = [dataArray copy];
     }
     return self;
 }
 @end
+
 
 //MARK: - ProductsData
 @implementation ProductsData

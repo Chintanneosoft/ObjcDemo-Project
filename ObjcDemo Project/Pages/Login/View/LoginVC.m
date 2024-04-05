@@ -52,6 +52,7 @@
 }
 
 - (void)resultWithMessage:(NSString *)resultMsg {
+    dispatch_async(dispatch_get_main_queue(), ^{
     UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Alert"
                                    message:resultMsg
                                    preferredStyle:UIAlertControllerStyleAlert];
@@ -65,6 +66,7 @@
 
     [alert addAction:defaultAction];
     [self presentViewController:alert animated:YES completion:nil];
+    });
 }
 
 @end

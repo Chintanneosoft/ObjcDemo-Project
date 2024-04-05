@@ -15,9 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HomeViewModel : NSObject
 
 @property (strong,nonatomic) NSMutableDictionary *categoryDict;
+@property (strong,nonatomic) NSDictionary *categoryIdDict;
 @property (weak,nonatomic) id<ResultMessageDelegate> resultMessageDelegate;
 @property (strong, nonatomic) NSMutableArray *categoryProductList;
 
+- (void) callForGetProductList;
 - (void) getProductListForCategoryId: (NSNumber*) categoryId;
 - (void) updatingDictionaryWithCategory: (NSInteger) categoryId products: (Products *) productList;
 

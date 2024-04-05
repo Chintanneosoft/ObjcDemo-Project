@@ -21,28 +21,17 @@
         [LoginService loginUserWithEmail:email password:password completion:^(User *user, UserFailure *userFailure, NSError *error) {
             if (user != nil) {
                 [[NSUserDefaults standardUserDefaults] setObject:user.data.access_token ? user.data.access_token : @"" forKey: @"accessToken"];
-//                [[NSUserDefaults standardUserDefaults] setObject:user.firstName ? user.firstName : @"" forKey:UserDefaultsKeysUserFirstName];
-//                [self.loginViewModelDelegate showAlertWithResult:YES message:user.userMsg];
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.resultMessageDelegate resultWithMessage: user.user_msg];
-                });
-               
+                [self.resultMessageDelegate resultWithMessage: user.user_msg];
                 NSLog(@"%@", user.user_msg);
             } else if (userFailure != nil) {
-//                [self.loginViewModelDelegate showAlertWithResult:NO message:userFailure.userMsg];
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.resultMessageDelegate resultWithMessage: userFailure.user_msg];
-                });
+                [self.resultMessageDelegate resultWithMessage: userFailure.user_msg];
                 NSLog(@"%@", userFailure.user_msg);
             } else if (error != nil) {
-                NSLog(@"%@", error.localizedDescription);
-//                [self.loginViewModelDelegate showAlertWithResult:NO message:error.localizedDescription];
+                [self.resultMessageDelegate resultWithMessage: error.localizedDescription];
             }
         }];
     } else {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.resultMessageDelegate resultWithMessage: validationResult];
-        });
+        [self.resultMessageDelegate resultWithMessage: validationResult];
         NSLog(@"%@", validationResult);
     }
 }

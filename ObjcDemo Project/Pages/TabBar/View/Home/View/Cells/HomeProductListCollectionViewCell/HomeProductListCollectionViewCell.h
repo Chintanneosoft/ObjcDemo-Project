@@ -6,14 +6,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Products.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeProductListCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *productImg;
-@property (weak, nonatomic) IBOutlet UILabel *productPrice;
-@property (weak, nonatomic) IBOutlet UILabel *productName;
+@property (weak, nonatomic) IBOutlet UILabel *lblProductPrice;
+@property (weak, nonatomic) IBOutlet UILabel *lblProductName;
 
+- (void) configureCellWithProductData: (ProductsData*) productData;
 @end
 
 NS_ASSUME_NONNULL_END

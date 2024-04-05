@@ -23,10 +23,14 @@
     if ([scene isKindOfClass:[UIWindowScene class]]) {
         UIWindowScene *windowScene = (UIWindowScene *)scene;
         UIWindow *window = [[UIWindow alloc] initWithWindowScene:windowScene];
-        LoginVC *viewController = [[LoginVC alloc] init];
-//        TabBarVC *viewController = [[TabBarVC alloc] init];;
-        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-        window.rootViewController = navigationController;
+        if (!(![[NSUserDefaults standardUserDefaults] stringForKey: @"accessToken"] || [[[NSUserDefaults standardUserDefaults] stringForKey: @"accessToken"] isEqualToString:@""])) {
+            TabBarVC *viewController = [[TabBarVC alloc] init];
+                UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController: viewController];
+            window.rootViewController = navigationController;
+            } else {
+                UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController: [[LoginVC alloc] init]];
+                window.rootViewController = navigationController;
+            }
         self.window = window;
         [window makeKeyAndVisible];
     }

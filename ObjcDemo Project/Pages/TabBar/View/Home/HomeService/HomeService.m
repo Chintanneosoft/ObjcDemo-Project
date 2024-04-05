@@ -21,7 +21,7 @@
             completion(nil, error);
         } else {
             NSError *jsonError;
-            Products *products = [[Products alloc] initWithDictionary:response];
+            Products *products = [[Products alloc] initWithData:response error:nil] ;
             if (jsonError) {
                 completion(nil, jsonError);
             } else {

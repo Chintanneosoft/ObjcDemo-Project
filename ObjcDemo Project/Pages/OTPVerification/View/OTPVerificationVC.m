@@ -7,12 +7,12 @@
 
 #import "OTPVerificationVC.h"
 #import "TabBarVC.h"
+#import "SceneDelegate.h"
 
 @implementation OTPVerificationVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     [self setTextFields];
 }
 
@@ -27,7 +27,9 @@
 }
 - (IBAction)btnVerifyOTPTapped:(id)sender {
     TabBarVC *nextVC = [[TabBarVC alloc] init];
-    [self.navigationController pushViewController:nextVC animated:YES];
+    SceneDelegate *sceneDelegate = (SceneDelegate *)UIApplication.sharedApplication.connectedScenes.allObjects.firstObject.delegate;
+    UIWindow *window = sceneDelegate.window;
+    window.rootViewController = nextVC;
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
@@ -49,7 +51,6 @@
                     [textField resignFirstResponder];
                     [prevTextField becomeFirstResponder];
                 }
-
             }
     }
     return NO;

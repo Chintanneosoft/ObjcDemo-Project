@@ -22,6 +22,7 @@
 - (void)setNavBar {
     self.navigationItem.backButtonTitle = @"";
     self.navigationController.navigationBar.tintColor = UIColor.whiteColor;
+    self.navigationController.navigationBar.backgroundColor = [UIColor colorNamed:@"secondary"];
 }
 
 @end
