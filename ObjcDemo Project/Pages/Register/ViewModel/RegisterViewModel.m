@@ -39,15 +39,15 @@
                                                  phone:_registerInputData[@"phone"]
                                            completion:^(User *user, NSError *error) {
             if (user) {
-//                [[NSUserDefaults standardUserDefaults] setObject:user.data.access_token ? user.data.access_token : @"" forKey:@"accessToken"];
+                [self.resultMessageDelegate resultWithMessage:@"Registered successfully"];
                 NSLog(@"%@", user.user_msg);
-                // [self.registerViewModelDelegate showAlertWithResult:YES message:user.user_msg];
             } else if (error) {
+                [self.resultMessageDelegate resultWithMessage:error.localizedDescription];
                 NSLog(@"%@", error.localizedDescription);
-                // [self.registerViewModelDelegate showAlertWithResult:NO message:error.localizedDescription];
             }
         }];
     } else {
+        [self.resultMessageDelegate resultWithMessage:validationResult];
         NSLog(@"%@", validationResult);
     }
 }

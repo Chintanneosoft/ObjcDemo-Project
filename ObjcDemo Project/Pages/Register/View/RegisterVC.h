@@ -11,8 +11,9 @@
 #import "BaseVC.h"
 
 NS_ASSUME_NONNULL_BEGIN
+//MARK: - RegisterVC
+@interface RegisterVC : BaseVC<UITableViewDelegate,UITableViewDataSource,TextFieldTableViewCellDelegate,ResultMessageDelegate>
 
-@interface RegisterVC : BaseVC<UITableViewDelegate,UITableViewDataSource,TextFieldTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *registerTableView;
 
 @property (strong, nonatomic) RegisterViewModel *VM;

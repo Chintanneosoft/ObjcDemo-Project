@@ -51,21 +51,15 @@
 //    [self.navigationController pushViewController:nextVC animated:YES];
 }
 
+//MARK: - ResultMessageDelegate Functions
 - (void)resultWithMessage:(NSString *)resultMsg {
     dispatch_async(dispatch_get_main_queue(), ^{
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Alert"
-                                   message:resultMsg
-                                   preferredStyle:UIAlertControllerStyleAlert];
-
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-        if ([resultMsg  isEqual: @"Logged In successfully"]){
-            OTPVerificationVC *nextVC = [[OTPVerificationVC alloc] init];
-            [self.navigationController pushViewController:nextVC animated:YES];
-        } 
-    }];
-
-    [alert addAction:defaultAction];
-    [self presentViewController:alert animated:YES completion:nil];
+        [self showAlertWithTitle:@"Title" message:resultMsg completion:^{
+            if ([resultMsg  isEqual: @"Logged In successfully"]){
+                OTPVerificationVC *nextVC = [[OTPVerificationVC alloc] init];
+                [self.navigationController pushViewController:nextVC animated:YES];
+            }
+        }];
     });
 }
 

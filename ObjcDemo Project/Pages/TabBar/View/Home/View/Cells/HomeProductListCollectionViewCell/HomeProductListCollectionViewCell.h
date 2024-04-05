@@ -9,8 +9,9 @@
 #import "Products.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
+//MARK: - HomeProductListCollectionViewCell
 @interface HomeProductListCollectionViewCell : UICollectionViewCell
+//IBoutlets
 @property (weak, nonatomic) IBOutlet UIImageView *productImg;
 @property (weak, nonatomic) IBOutlet UILabel *lblProductPrice;
 @property (weak, nonatomic) IBOutlet UILabel *lblProductName;

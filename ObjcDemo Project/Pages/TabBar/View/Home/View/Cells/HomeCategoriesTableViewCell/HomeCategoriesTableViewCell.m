@@ -51,11 +51,4 @@
     return UIEdgeInsetsMake(0, 10, -10, 10);
 }
 
-//- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
-//    return 20;
-//}
-//
-//- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
-//    return 20;
-//}
 @end

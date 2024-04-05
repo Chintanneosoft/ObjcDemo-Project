@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BaseVC : UIViewController
 
 -(void) setNavBar;
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message completion:(void (^)(void))completion;
 
 @end
 

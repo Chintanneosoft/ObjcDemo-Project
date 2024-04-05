@@ -19,6 +19,7 @@
     [self setTableView];
     [self setUpUI];
     _VM = [[RegisterViewModel alloc] init];
+    _VM.resultMessageDelegate = self;
 }
 
 - (void) setUpUI{
@@ -39,7 +40,7 @@
     [self.registerTableView registerNib:[UINib nibWithNibName:@"RegisterHeaderView" bundle:nil] forCellReuseIdentifier:@"RegisterHeaderView"];
 }
 
-//MARK: - TableView
+//MARK: - TableView Functions
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 0){
         return 7;
@@ -161,4 +162,14 @@
     }
 }
 
+//MARK: - ResultMessageDelegate Function
+- (void)resultWithMessage:(NSString *)resultMsg {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self showAlertWithTitle:@"Alert" message:resultMsg completion:^{
+            if ([resultMsg  isEqual: @"Registered successfully"]){
+                [self.navigationController popViewControllerAnimated:YES];
+            }
+        }];
+    });
+}
 @end

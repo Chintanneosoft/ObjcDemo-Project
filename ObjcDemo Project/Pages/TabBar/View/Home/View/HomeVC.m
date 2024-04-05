@@ -65,12 +65,7 @@
             [self.homeTableView reloadData];
             NSLog(@"%@", self.VM.categoryProductList);
         } else {
-            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Alert" message:resultMsg preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-                
-            }];
-            [alert addAction:defaultAction];
-            [self presentViewController:alert animated:YES completion:nil];
+            [self showAlertWithTitle:@"Alert" message:resultMsg completion:^{}];
         }
     });
 }

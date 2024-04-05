@@ -7,9 +7,9 @@
 
 #import "HomeProductListCollectionViewCell.h"
 #import "SDWebImage.h"
-
+//MARK: - HomeProductListCollectionViewCell
 @implementation HomeProductListCollectionViewCell
-
+//Lifecycle
 - (void)awakeFromNib {
     [super awakeFromNib];
 }

@@ -25,4 +25,20 @@
     self.navigationController.navigationBar.backgroundColor = [UIColor colorNamed:@"secondary"];
 }
 
+- (void)showAlertWithTitle: (NSString *)title message: (NSString *)message completion:(void (^)(void))completion {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction * action) {
+                                                         if (completion) {
+                                                             completion();
+                                                         }
+                                                     }];
+    [alert addAction:okAction];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
 @end
