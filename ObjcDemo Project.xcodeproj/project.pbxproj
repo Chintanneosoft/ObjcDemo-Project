@@ -21,6 +21,9 @@
 		1878F8032BAADAE9007FA01E /* SubmitButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1878F8012BAADAE9007FA01E /* SubmitButtonTableViewCell.xib */; };
 		189D5E732BABFDE3009FF741 /* RegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 189D5E722BABFDE3009FF741 /* RegisterViewModel.m */; };
 		189D5E762BAC0050009FF741 /* RegisterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 189D5E752BAC0050009FF741 /* RegisterModel.m */; };
+		189E186F2BC3F9C100944B13 /* NVActivityIndicatorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E186C2BC3F9C100944B13 /* NVActivityIndicatorShape.swift */; };
+		189E18702BC3F9C100944B13 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E186D2BC3F9C100944B13 /* NVActivityIndicatorAnimationBallTrianglePath.swift */; };
+		189E18712BC3F9C100944B13 /* NVActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E186E2BC3F9C100944B13 /* NVActivityIndicatorView.swift */; };
 		18A01C792B9599470033EF21 /* API Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A01C782B9599470033EF21 /* API Manager.m */; };
 		18A01C7F2B959EF30033EF21 /* API Services.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A01C7E2B959EF30033EF21 /* API Services.m */; };
 		18A01C862B95A7FE0033EF21 /* NetworkConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A01C852B95A7FE0033EF21 /* NetworkConfiguration.m */; };
@@ -124,6 +127,10 @@
 		189D5E722BABFDE3009FF741 /* RegisterViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewModel.m; sourceTree = "<group>"; };
 		189D5E742BAC0050009FF741 /* RegisterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterModel.h; sourceTree = "<group>"; };
 		189D5E752BAC0050009FF741 /* RegisterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterModel.m; sourceTree = "<group>"; };
+		189E180E2BC3D64700944B13 /* ObjcDemo Project-Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjcDemo Project-Swift.h"; sourceTree = "<group>"; };
+		189E186C2BC3F9C100944B13 /* NVActivityIndicatorShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorShape.swift; sourceTree = "<group>"; };
+		189E186D2BC3F9C100944B13 /* NVActivityIndicatorAnimationBallTrianglePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallTrianglePath.swift; sourceTree = "<group>"; };
+		189E186E2BC3F9C100944B13 /* NVActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorView.swift; sourceTree = "<group>"; };
 		18A01C782B9599470033EF21 /* API Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "API Manager.m"; sourceTree = "<group>"; };
 		18A01C7A2B959E370033EF21 /* API Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "API Manager.h"; sourceTree = "<group>"; };
 		18A01C7E2B959EF30033EF21 /* API Services.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "API Services.m"; sourceTree = "<group>"; };
@@ -416,6 +423,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		189E180D2BC3D5DF00944B13 /* Loader Files */ = {
+			isa = PBXGroup;
+			children = (
+				189E186D2BC3F9C100944B13 /* NVActivityIndicatorAnimationBallTrianglePath.swift */,
+				189E186C2BC3F9C100944B13 /* NVActivityIndicatorShape.swift */,
+				189E186E2BC3F9C100944B13 /* NVActivityIndicatorView.swift */,
+				189E180E2BC3D64700944B13 /* ObjcDemo Project-Swift.h */,
+			);
+			path = "Loader Files";
+			sourceTree = "<group>";
+		};
 		18A01C762B9599140033EF21 /* Web Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -706,6 +724,7 @@
 		18B76CEA2B91B80A00F6A373 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				189E180D2BC3D5DF00944B13 /* Loader Files */,
 				18E029E62BBD8BC40085A330 /* Protocols */,
 				18E029DB2BBD59E20085A330 /* Common Functions */,
 				18732E432BBAF0BD000C0CA8 /* CustomTabBar */,
@@ -937,6 +956,7 @@
 				TargetAttributes = {
 					18B76C9D2B91B05C00F6A373 = {
 						CreatedOnToolsVersion = 15.1;
+						LastSwiftMigration = 1510;
 					};
 					18B76CB82B91B05E00F6A373 = {
 						CreatedOnToolsVersion = 15.1;
@@ -1117,6 +1137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189E186F2BC3F9C100944B13 /* NVActivityIndicatorShape.swift in Sources */,
 				18A01C912B95EBBD0033EF21 /* User.m in Sources */,
 				1878F8022BAADAE9007FA01E /* SubmitButtonTableViewCell.m in Sources */,
 				18A6B2AE2B91DE41000E3209 /* TextFieldTableViewCell.m in Sources */,
@@ -1138,6 +1159,7 @@
 				18BA05272BC024B00028AC93 /* ProductDetails.m in Sources */,
 				18A6B2A72B91DC9F000E3209 /* RegisterVC.m in Sources */,
 				18A0519B2BAD60C5004A02D7 /* RegisterService.m in Sources */,
+				189E18702BC3F9C100944B13 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
 				18732E422BBAEBA6000C0CA8 /* BaseVC.m in Sources */,
 				18B76CE92B91B6C100F6A373 /* LoginViewModel.m in Sources */,
 				18BA052C2BC02E3F0028AC93 /* RatingCollectionViewCell.m in Sources */,
@@ -1146,6 +1168,7 @@
 				18E029D52BBD33550085A330 /* HomeProductListCollectionViewCell.m in Sources */,
 				18BA05232BC024760028AC93 /* ProductDetailsViewModel.m in Sources */,
 				189D5E762BAC0050009FF741 /* RegisterModel.m in Sources */,
+				189E18712BC3F9C100944B13 /* NVActivityIndicatorView.swift in Sources */,
 				18E029D92BBD3C9D0085A330 /* HomeViewModel.m in Sources */,
 				18BAF3A72BB2CBAC004D181E /* OTPVerificationVC.m in Sources */,
 				18732E332BBAD374000C0CA8 /* CartVC.m in Sources */,
@@ -1242,6 +1265,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -1303,6 +1327,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -1329,8 +1354,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = JDQM4MDQ97;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1345,6 +1372,7 @@
 					"$(PROJECT_DIR)/ObjcDemo\\ Project",
 					"$(PROJECT_DIR)/ObjcDemo\\ Project",
 					"$(PROJECT_DIR)/ObjcDemo\\ Project",
+					"$(PROJECT_DIR)",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ObjcDemo Project/Info.plist";
@@ -1352,6 +1380,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1360,6 +1389,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.practice.ObjcDemo-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjcDemo Project/Utilities/Loader Files/ObjcDemo Project-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1370,8 +1402,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = JDQM4MDQ97;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1386,6 +1420,7 @@
 					"$(PROJECT_DIR)/ObjcDemo\\ Project",
 					"$(PROJECT_DIR)/ObjcDemo\\ Project",
 					"$(PROJECT_DIR)/ObjcDemo\\ Project",
+					"$(PROJECT_DIR)",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ObjcDemo Project/Info.plist";
@@ -1393,6 +1428,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1401,6 +1437,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.practice.ObjcDemo-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjcDemo Project/Utilities/Loader Files/ObjcDemo Project-Swift.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1409,6 +1447,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ED7A7A79FB68C32B5C102CA8 /* Pods-ObjcDemo ProjectTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1428,6 +1467,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D92DC9CBE27A2269ED2771A1 /* Pods-ObjcDemo ProjectTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1447,6 +1487,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 72A50C498D45598ACE6B3474 /* Pods-ObjcDemo Project-ObjcDemo ProjectUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JDQM4MDQ97;
@@ -1464,6 +1505,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AA849E2C2D9276D4B3240947 /* Pods-ObjcDemo Project-ObjcDemo ProjectUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JDQM4MDQ97;

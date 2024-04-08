@@ -7,6 +7,7 @@ target 'ObjcDemo Project' do
 
   # Pods for ObjcDemo Project
   pod 'SDWebImage'
+#  pod 'NVActivityIndicatorView'
 
   target 'ObjcDemo ProjectTests' do
     inherit! :search_paths

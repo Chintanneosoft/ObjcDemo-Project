@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BaseVC : UIViewController
 
 -(void) setNavBar;
+- (void)showLoader;
+- (void)hideLoader;
+- (void) setLoaderWithContainerView:(UIView*)containerView;
 - (void)showAlertWithTitle:(NSString *)title message:(NSString *)message completion:(void (^)(void))completion;
 
 @end

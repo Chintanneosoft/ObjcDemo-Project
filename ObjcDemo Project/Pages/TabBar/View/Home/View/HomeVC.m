@@ -18,6 +18,7 @@
     [super viewDidLoad];
     [self setTableView];
     [self setUpUI];
+    [super setLoaderWithContainerView: self.view];
     [self getProductList];
 }
 
@@ -41,6 +42,7 @@
 }
 
 - (void)getProductList{
+    [super showLoader];
     [self.VM callForGetProductList];
 }
 
@@ -76,6 +78,7 @@
 //MARK: - ResultMessageDelegate Function
 - (void)resultWithMessage:(NSString *)resultMsg {
     dispatch_async(dispatch_get_main_queue(), ^{
+        [super hideLoader];
         if ([resultMsg  isEqual: @"Products Fetched SuccessFully"]){
             [self.homeTableView reloadData];
             NSLog(@"%@", self.VM.categoryProductList);

@@ -6,21 +6,34 @@
 //
 
 #import "BaseVC.h"
+#import "ObjcDemo_Project-Swift.h"
 
-@interface BaseVC ()
-
-@end
 
 @implementation BaseVC
-
+NVActivityIndicatorView *activityIndicatorView;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+}
+
+- (void) setLoaderWithContainerView: (UIView*)containerView{
+    activityIndicatorView = [[NVActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 60, 60) color:[UIColor whiteColor] padding:(CGFloat)10];
+    activityIndicatorView.backgroundColor = [UIColor colorNamed:@"secondary"];
+    activityIndicatorView.layer.cornerRadius = 10;
+    [containerView addSubview:activityIndicatorView];
+    activityIndicatorView.center = containerView.center;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear: animated];
     [self setNavBar];
+}
+
+- (void)showLoader {
+    [activityIndicatorView startAnimating];
+}
+
+- (void)hideLoader{
+    [activityIndicatorView stopAnimating];
 }
 
 - (void)setNavBar {

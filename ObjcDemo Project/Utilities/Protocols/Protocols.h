@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+//MARK: - ResultMessageDelegate protocol
 @protocol ResultMessageDelegate <NSObject>
 - (void) resultWithMessage: (NSString *)resultMsg;
 @end
