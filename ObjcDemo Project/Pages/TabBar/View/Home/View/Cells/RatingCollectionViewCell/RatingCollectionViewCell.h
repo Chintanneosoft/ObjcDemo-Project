@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+//MARK: - RatingCollectionViewCell
 @interface RatingCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIButton *btnRating;
 

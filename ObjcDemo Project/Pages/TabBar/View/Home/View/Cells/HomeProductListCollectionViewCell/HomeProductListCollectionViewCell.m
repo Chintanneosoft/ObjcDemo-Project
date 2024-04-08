@@ -27,6 +27,7 @@ int productRating;
     [self.ratingCollectionView registerNib:[UINib nibWithNibName:@"RatingCollectionViewCell" bundle:nil] forCellWithReuseIdentifier: @"RatingCollectionViewCell"];
 }
 
+// Configure
 - (void) configureCellWithProductData: (ProductsData*) productData{
     self.lblProductName.text = productData.name;
     self.lblProductPrice.text = [NSString stringWithFormat:@"Rs: %@", [productData.cost stringValue]];
@@ -37,11 +38,10 @@ int productRating;
     [self.ratingCollectionView reloadData];
 }
 
+//MARK: - Collection View
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     RatingCollectionViewCell *ratingCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"RatingCollectionViewCell" forIndexPath:indexPath];
-    for (int i = 0; i < 5; i++){
-        [ratingCell configureCellWithSelection:(i < productRating)];
-    }
+    [ratingCell configureCellWithSelection:(indexPath.row < productRating)];
     return ratingCell;
 }
 
@@ -50,7 +50,7 @@ int productRating;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(collectionView.frame.size.width/5, collectionView.frame.size.height);
+    return CGSizeMake(collectionView.frame.size.width/5, collectionView.frame.size.width/5);
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{

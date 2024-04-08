@@ -6,13 +6,14 @@
 //
 
 #import "RatingCollectionViewCell.h"
-
+//MARK: - RatingCollectionViewCell
 @implementation RatingCollectionViewCell
-
+//lifeCycle
 - (void)awakeFromNib {
     [super awakeFromNib];
 }
 
+//Configure with cell
 - (void) configureCellWithSelection: (BOOL) isSelected{
     if (isSelected){
         [self.btnRating setSelected:YES];

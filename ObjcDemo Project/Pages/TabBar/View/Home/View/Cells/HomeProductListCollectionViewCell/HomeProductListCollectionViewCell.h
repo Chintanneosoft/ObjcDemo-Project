@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *lblProductName;
 @property (weak, nonatomic) IBOutlet UICollectionView *ratingCollectionView;
 
+//Functions
 - (void) configureCellWithProductData: (ProductsData*) productData;
 - (void) setCollectionView;
 @end

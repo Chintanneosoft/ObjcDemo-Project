@@ -64,31 +64,12 @@
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     RegisterHeaderView *headerView = [[RegisterHeaderView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 30)];
-    UILabel *registerLabel = [[UILabel alloc]initWithFrame:CGRectMake(20, 0, tableView.frame.size.width, 30)];
-    switch (section) {
-        case 0:
-            registerLabel.text = @"Tables";
-            break;
-        case 1:
-            registerLabel.text = @"Chairs";
-            break;
-        case 2:
-            registerLabel.text = @"Sofa";
-            break;
-        case 3:
-            registerLabel.text = @"Cupboards";
-            break;
-            
-        default:
-            break;
-    }
-    
-    registerLabel.textAlignment = NSTextAlignmentLeft;
-    registerLabel.font = [UIFont fontWithName:@"KohinoorDevanagari-Semibold" size:22.0f];
-    registerLabel.textColor = [UIColor whiteColor];
-    [headerView addSubview:registerLabel];
-    
-    
+    UILabel *headerLabel = [[UILabel alloc]initWithFrame:CGRectMake(20, 0, tableView.frame.size.width, 30)];
+    headerLabel.text = self.VM.categoryIdDict[@(section + 1)];
+    headerLabel.textAlignment = NSTextAlignmentLeft;
+    headerLabel.font = [UIFont fontWithName:@"KohinoorDevanagari-Semibold" size:22.0f];
+    headerLabel.textColor = [UIColor whiteColor];
+    [headerView addSubview:headerLabel];
     return headerView;
 }
 

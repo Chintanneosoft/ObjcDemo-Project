@@ -10,7 +10,7 @@
 
 //MARK: - HomeCategoriesTableViewCell
 @implementation HomeCategoriesTableViewCell
-
+//Lifecycle
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self setCollectionView];
@@ -21,6 +21,7 @@
 
 }
 
+//Functions
 - (void) setCollectionView{
     self.homeProductListCollectionView.delegate = self;
     self.homeProductListCollectionView.dataSource = self;
@@ -28,10 +29,13 @@
     [self.homeProductListCollectionView registerNib:[UINib nibWithNibName:@"HomeProductListCollectionViewCell" bundle:nil] forCellWithReuseIdentifier: @"HomeProductListCollectionViewCell"];
 }
 
+//MARK: - Configure
 - (void) configureCellWithProductList: (NSArray<ProductsData *>*) productList{
     self.productsList = productList;
+    [self.homeProductListCollectionView reloadData];
 }
 
+//MARK: - Collection View Functions
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     HomeProductListCollectionViewCell *productListCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeProductListCollectionViewCell" forIndexPath:indexPath];
     [productListCell configureCellWithProductData:self.productsList[indexPath.row]];

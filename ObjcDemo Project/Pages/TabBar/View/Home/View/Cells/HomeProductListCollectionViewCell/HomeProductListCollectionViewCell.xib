@@ -44,7 +44,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="zMr-YI-o6J">
-                                <rect key="frame" x="55" y="256.66666666666669" width="230" height="19.666666666666686"/>
+                                <rect key="frame" x="65" y="256.66666666666669" width="220" height="19.666666666666686"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hRA-80-bPE">
                                     <size key="itemSize" width="128" height="128"/>
@@ -65,7 +65,7 @@
                             <constraint firstAttribute="trailing" secondItem="zMr-YI-o6J" secondAttribute="trailing" constant="10" id="Vuw-aQ-drT"/>
                             <constraint firstItem="PcU-4A-qYV" firstAttribute="leading" secondItem="uYa-3N-SoZ" secondAttribute="leading" constant="10" id="fHf-BC-vmC"/>
                             <constraint firstItem="PLr-uk-M6b" firstAttribute="leading" secondItem="uYa-3N-SoZ" secondAttribute="leading" constant="10" id="gLi-rc-Fjb"/>
-                            <constraint firstItem="zMr-YI-o6J" firstAttribute="leading" secondItem="PLr-uk-M6b" secondAttribute="trailing" constant="10" id="gMP-12-9fa"/>
+                            <constraint firstItem="zMr-YI-o6J" firstAttribute="leading" secondItem="PLr-uk-M6b" secondAttribute="trailing" constant="20" id="gMP-12-9fa"/>
                             <constraint firstItem="zMr-YI-o6J" firstAttribute="top" secondItem="PcU-4A-qYV" secondAttribute="bottom" constant="10" id="hNQ-0R-uWJ"/>
                             <constraint firstItem="8L5-06-uzt" firstAttribute="top" secondItem="PLr-uk-M6b" secondAttribute="bottom" constant="5" id="kBv-f4-kEV"/>
                             <constraint firstItem="8L5-06-uzt" firstAttribute="top" secondItem="zMr-YI-o6J" secondAttribute="bottom" constant="5" id="wtm-YQ-56d"/>
